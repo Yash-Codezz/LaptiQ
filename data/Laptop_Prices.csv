@@ -1,0 +1,938 @@
+Brand,Laptop_Type,Launch_Year,CPU_Brand,CPU_Model,CPU_Cores,GPU_Type,GPU_VRAM,GPU_Model,Screen_Size,Resolution,Refresh_Rate,RAM,Storage,Storage_Type,Weight,OS,Price
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 8-Core GPU,13,2560x1664,60,16,512,SSD,1.23,macOS,119900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,16,512,SSD,1.23,macOS,129900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,16,1024,SSD,1.23,macOS,139900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,16,2048,SSD,1.23,macOS,179900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,24,512,SSD,1.23,macOS,139900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,24,1024,SSD,1.23,macOS,159900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,24,2048,SSD,1.23,macOS,199900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,24,4096,SSD,1.23,macOS,259900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,32,1024,SSD,1.23,macOS,179900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,32,2048,SSD,1.23,macOS,219900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,13,2560x1664,60,32,4096,SSD,1.23,macOS,279900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,16,1024,SSD,1.51,macOS,164900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,16,2048,SSD,1.51,macOS,204900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,24,512,SSD,1.51,macOS,164900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,24,1024,SSD,1.51,macOS,184900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,24,2048,SSD,1.51,macOS,224900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,24,4096,SSD,1.51,macOS,284900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,32,1024,SSD,1.51,macOS,204900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,32,2048,SSD,1.51,macOS,244900
+Apple,Ultrabook,2026,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,15,2880x1864,60,32,4096,SSD,1.51,macOS,304900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,16,1024,SSD,1.55,macOS,189900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,16,2048,SSD,1.55,macOS,229900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,24,1024,SSD,1.55,macOS,209900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,24,2048,SSD,1.55,macOS,249900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,24,4096,SSD,1.55,macOS,309900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,32,1024,SSD,1.55,macOS,229900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,32,2048,SSD,1.55,macOS,269900
+Apple,Creator,2025,Apple,M5,10,Integrated,Shared,M5 10-Core GPU,14,3024x1964,120,32,4096,SSD,1.55,macOS,329900
+Apple,Workstation,2026,Apple,M5 Pro,15,Integrated,Shared,M5 Pro 16-Core GPU,14,3024x1964,120,24,1024,SSD,1.6,macOS,249900
+Apple,Workstation,2026,Apple,M5 Pro,15,Integrated,Shared,M5 Pro 16-Core GPU,14,3024x1964,120,24,2048,SSD,1.6,macOS,289900
+Apple,Workstation,2026,Apple,M5 Pro,15,Integrated,Shared,M5 Pro 16-Core GPU,14,3024x1964,120,24,4096,SSD,1.6,macOS,349900
+Apple,Workstation,2026,Apple,M5 Pro,15,Integrated,Shared,M5 Pro 16-Core GPU,14,3024x1964,120,48,2048,SSD,1.6,macOS,329900
+Apple,Workstation,2026,Apple,M5 Pro,15,Integrated,Shared,M5 Pro 16-Core GPU,14,3024x1964,120,48,4096,SSD,1.6,macOS,389900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,24,1024,SSD,1.6,macOS,269900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,24,2048,SSD,1.6,macOS,309900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,24,4096,SSD,1.6,macOS,369900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,48,2048,SSD,1.6,macOS,349900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,48,4096,SSD,1.6,macOS,409900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,64,2048,SSD,1.6,macOS,369900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,14,3024x1964,120,64,4096,SSD,1.6,macOS,429900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 32-Core GPU,14,3024x1964,120,36,2048,SSD,1.6,macOS,399900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 32-Core GPU,14,3024x1964,120,36,4096,SSD,1.6,macOS,459900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,48,2048,SSD,1.6,macOS,449900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,48,4096,SSD,1.6,macOS,509900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,48,8192,SSD,1.6,macOS,629900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,64,2048,SSD,1.6,macOS,469900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,64,4096,SSD,1.6,macOS,529900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,64,8192,SSD,1.6,macOS,649900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,128,4096,SSD,1.6,macOS,609900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,14,3024x1964,120,128,8192,SSD,1.6,macOS,729900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,24,1024,SSD,2.1,macOS,299900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,24,2048,SSD,2.1,macOS,339900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,24,4096,SSD,2.1,macOS,399900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,48,2048,SSD,2.1,macOS,379900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,48,4096,SSD,2.1,macOS,439900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,64,2048,SSD,2.1,macOS,399900
+Apple,Workstation,2026,Apple,M5 Pro,18,Integrated,Shared,M5 Pro 20-Core GPU,16,3456x2234,120,64,4096,SSD,2.1,macOS,459900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 32-Core GPU,16,3456x2234,120,36,2048,SSD,2.1,macOS,429900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 32-Core GPU,16,3456x2234,120,36,4096,SSD,2.1,macOS,489900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,48,2048,SSD,2.1,macOS,499900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,48,4096,SSD,2.1,macOS,559900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,48,8192,SSD,2.1,macOS,679900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,64,2048,SSD,2.1,macOS,519900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,64,4096,SSD,2.1,macOS,579900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,64,8192,SSD,2.1,macOS,699900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,128,4096,SSD,2.1,macOS,659900
+Apple,Workstation,2026,Apple,M5 Max,18,Integrated,Shared,M5 Max 40-Core GPU,16,3456x2234,120,128,8192,SSD,2.1,macOS,779900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 8-Core GPU,13,2560x1664,60,16,256,SSD,1.23,macOS,97900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,13,2560x1664,60,16,512,SSD,1.23,macOS,107900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,13,2560x1664,60,24,512,SSD,1.23,macOS,127900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,15,2880x1864,60,16,256,SSD,1.51,macOS,122900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,15,2880x1864,60,16,512,SSD,1.51,macOS,131900
+Apple,Ultrabook,2025,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,15,2880x1864,60,24,512,SSD,1.51,macOS,151900
+Apple,Creator,2024,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,14,3024x1964,120,16,512,SSD,1.55,macOS,159900
+Apple,Creator,2024,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,14,3024x1964,120,16,1024,SSD,1.55,macOS,179900
+Apple,Creator,2024,Apple,M4,10,Integrated,Shared,M4 10-Core GPU,14,3024x1964,120,24,1024,SSD,1.55,macOS,199900
+Apple,Workstation,2024,Apple,M4 Pro,12,Integrated,Shared,M4 Pro 16-Core GPU,14,3024x1964,120,24,512,SSD,1.6,macOS,199900
+Apple,Workstation,2024,Apple,M4 Pro,14,Integrated,Shared,M4 Pro 20-Core GPU,14,3024x1964,120,24,1024,SSD,1.6,macOS,239900
+Apple,Workstation,2024,Apple,M4 Max,14,Integrated,Shared,M4 Max 32-Core GPU,14,3024x1964,120,36,1024,SSD,1.6,macOS,319900
+Apple,Workstation,2024,Apple,M4 Pro,14,Integrated,Shared,M4 Pro 20-Core GPU,16,3456x2234,120,24,512,SSD,2.1,macOS,249900
+Apple,Workstation,2024,Apple,M4 Max,14,Integrated,Shared,M4 Max 32-Core GPU,16,3456x2234,120,36,1024,SSD,2.1,macOS,349900
+Apple,Workstation,2024,Apple,M4 Max,16,Integrated,Shared,M4 Max 40-Core GPU,16,3456x2234,120,48,1024,SSD,2.1,macOS,399900
+Apple,Ultrabook,2023,Apple,M3,8,Integrated,Shared,M3 8-Core GPU,13,2560x1664,60,8,256,SSD,1.23,macOS,89900
+Apple,Ultrabook,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,13,2560x1664,60,8,512,SSD,1.23,macOS,124900
+Apple,Ultrabook,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,13,2560x1664,60,16,512,SSD,1.23,macOS,99900
+Apple,Ultrabook,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,15,2880x1864,60,8,512,SSD,1.51,macOS,94000
+Apple,Ultrabook,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,15,2880x1864,60,16,512,SSD,1.51,macOS,121400
+Apple,Creator,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,14,3024x1964,120,8,512,SSD,1.55,macOS,112800
+Apple,Creator,2023,Apple,M3,8,Integrated,Shared,M3 10-Core GPU,14,3024x1964,120,16,1024,SSD,1.55,macOS,179900
+Apple,Workstation,2023,Apple,M3 Pro,11,Integrated,Shared,M3 Pro 14-Core GPU,14,3024x1964,120,18,512,SSD,1.6,macOS,170900
+Apple,Workstation,2023,Apple,M3 Pro,12,Integrated,Shared,M3 Pro 18-Core GPU,14,3024x1964,120,18,1024,SSD,1.6,macOS,229900
+Apple,Workstation,2023,Apple,M3 Max,14,Integrated,Shared,M3 Max 30-Core GPU,14,3024x1964,120,36,1024,SSD,1.6,macOS,233300
+Apple,Workstation,2023,Apple,M3 Pro,12,Integrated,Shared,M3 Pro 18-Core GPU,16,3456x2234,120,18,512,SSD,2.1,macOS,191900
+Apple,Workstation,2023,Apple,M3 Pro,12,Integrated,Shared,M3 Pro 18-Core GPU,16,3456x2234,120,36,512,SSD,2.1,macOS,209900
+Apple,Workstation,2023,Apple,M3 Max,14,Integrated,Shared,M3 Max 30-Core GPU,16,3456x2234,120,36,1024,SSD,2.1,macOS,339900
+Apple,Workstation,2023,Apple,M3 Max,16,Integrated,Shared,M3 Max 40-Core GPU,16,3456x2234,120,48,1024,SSD,2.1,macOS,389900
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,18,2560x1600,240,64,2048,SSD,3.3,Windows,479990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,16,2560x1600,240,32,2048,SSD,2.8,Windows,449990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,16,2560x1600,240,32,2048,SSD,2.8,Windows,399990
+Asus,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,12,RTX 5070 Ti,16,1920x1200,165,16,1024,SSD,2.5,Windows,239990
+Asus,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.5,Windows,184990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,16,1920x1200,165,32,1024,SSD,2.65,Windows,319990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,32,1024,SSD,2.65,Windows,275990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.65,Windows,249990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.65,Windows,204990
+Asus,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5050,16,1920x1200,165,16,1024,SSD,2.65,Windows,169990
+Asus,Gaming,2025,Intel,Intel Core Ultra 9 285H,16,Dedicated,16,RTX 5080,16,2560x1600,240,32,2048,SSD,1.95,Windows,359990
+Asus,Gaming,2025,AMD,AMD Ryzen AI 9 HX 370,12,Dedicated,12,RTX 5070 Ti,14,2880x1800,120,32,2048,SSD,1.57,Windows,279990
+Asus,Gaming,2025,AMD,AMD Ryzen 9 270,8,Dedicated,8,RTX 5060,14,2880x1800,120,16,1024,SSD,1.5,Windows,199990
+Asus,Gaming,2025,AMD,AMD Ryzen AI MAX+ 395,16,Integrated,Shared,AMD Radeon 8060S,13,2560x1600,180,64,1024,SSD,1.2,Windows,279990
+Asus,Gaming,2025,AMD,AMD Ryzen AI MAX+ 395,16,Integrated,Shared,AMD Radeon 8060S,13,2560x1600,180,32,1024,SSD,1.2,Windows,239990
+Asus,Gaming,2025,AMD,AMD Ryzen AI MAX 390,12,Integrated,Shared,AMD Radeon 8050S,13,2560x1600,180,32,1024,SSD,1.2,Windows,199990
+Asus,Gaming,2025,AMD,AMD Ryzen AI MAX+ 392,12,Integrated,Shared,AMD Radeon 8060S,14,2560x1600,165,32,1024,SSD,1.48,Windows,179990
+Asus,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5070,16,1920x1200,165,16,1024,SSD,2.2,Windows,144990
+Asus,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5060,16,1920x1200,165,16,1024,SSD,2.2,Windows,154990
+Asus,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5050,16,1920x1200,165,16,1024,SSD,2.2,Windows,199990
+Asus,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5070,16,2560x1600,165,16,1024,SSD,2.2,Windows,189990
+Asus,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5060,16,1920x1200,144,16,512,SSD,1.95,Windows,119990
+Asus,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5050,16,1920x1200,144,16,512,SSD,1.95,Windows,108990
+Asus,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,6,RTX 4050,16,1920x1200,144,16,512,SSD,1.95,Windows,99990
+Asus,Gaming,2025,Intel,Intel Core 5 210H,10,Dedicated,8,RTX 5050,16,1920x1200,144,16,512,SSD,1.95,Windows,100990
+Asus,Gaming,2025,Intel,Intel Core 5 210H,10,Dedicated,6,RTX 4050,16,1920x1200,144,16,512,SSD,1.95,Windows,90990
+Asus,Creator,2025,AMD,AMD Ryzen AI 9 HX 370,12,Dedicated,24,RTX 5090,16,3840x2400,120,64,2048,SSD,1.95,Windows,449990
+Asus,Creator,2025,AMD,AMD Ryzen AI 9 HX 370,12,Dedicated,16,RTX 5080,16,3840x2400,120,64,2048,SSD,1.95,Windows,399990
+Asus,Creator,2024,AMD,AMD Ryzen AI 9 365,10,Dedicated,6,RTX 4050,13,2880x1800,60,24,1024,SSD,1.38,Windows,159990
+Asus,Creator,2024,AMD,AMD Ryzen AI 9 HX 370,12,Dedicated,6,RTX 4050,13,2880x1800,60,24,1024,SSD,1.38,Windows,164990
+Asus,Creator,2024,Qualcomm,Snapdragon X Plus X1P-42-100,8,Integrated,Shared,Qualcomm Adreno,13,2880x1800,60,16,1024,SSD,0.85,Windows,119990
+Asus,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.65,Windows,199990
+Asus,2-in-1 Convertible,2024,Intel,Intel Core Ultra 9 185H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.65,Windows,149990
+Asus,2-in-1 Convertible,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.65,Windows,139990
+Asus,Ultrabook,2025,AMD,AMD Ryzen AI 9 465,10,Integrated,Shared,AMD Radeon 880M,16,2880x1800,120,32,1024,SSD,1.5,Windows,169990
+Asus,Ultrabook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,2880x1800,120,24,1024,SSD,1.5,Windows,134990
+Asus,Ultrabook,2024,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.2,Windows,148990
+Asus,Ultrabook,2024,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.2,Windows,134990
+Asus,Ultrabook,2024,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.2,Windows,130990
+Asus,Ultrabook,2024,Qualcomm,Snapdragon X Elite X1E-78-100,12,Integrated,Shared,Qualcomm Adreno,14,1920x1200,60,16,512,SSD,0.98,Windows,89990
+Asus,Ultrabook,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,14,1920x1200,60,16,512,SSD,0.98,Windows,86990
+Asus,Ultrabook,2024,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.28,Windows,104990
+Asus,Ultrabook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.28,Windows,94990
+Asus,Ultrabook,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.2,Windows,89990
+Asus,Ultrabook,2025,AMD,AMD Ryzen AI 5 430,4,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,1024,SSD,1.28,Windows,115990
+Asus,Ultrabook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,14,2880x1800,120,16,512,SSD,1.2,Windows,85990
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,8,128,eMMC,1.47,ChromeOS,26490
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,4,128,eMMC,1.47,ChromeOS,23990
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,4,64,eMMC,1.47,ChromeOS,22990
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,8,64,eMMC,1.8,ChromeOS,27490
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,8,128,eMMC,1.8,ChromeOS,26990
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,4,128,eMMC,1.8,ChromeOS,23490
+Asus,Notebook,2023,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,14,1920x1080,60,4,64,eMMC,1.8,ChromeOS,22990
+Asus,2-in-1 Convertible,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.5,Windows,63990
+Asus,Notebook,2023,Intel,Intel Core i9 13900H,14,Integrated,Shared,Intel Iris Xe,15,2880x1800,120,16,512,SSD,1.6,Windows,79990
+Asus,Notebook,2023,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel Iris Xe,15,2880x1800,120,16,512,SSD,1.6,Windows,76990
+Asus,Notebook,2024,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.3,Windows,94990
+Asus,Notebook,2024,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.3,Windows,79990
+Asus,Notebook,2024,AMD,AMD Ryzen AI 9 HX 370,12,Integrated,Shared,AMD Radeon 890M,14,2880x1800,120,24,512,SSD,1.3,Windows,104990
+Asus,Notebook,2024,Qualcomm,Snapdragon X Elite X1E-78-100,12,Integrated,Shared,Qualcomm Adreno,15,2880x1620,120,16,1024,SSD,1.42,Windows,81990
+Asus,Notebook,2024,Qualcomm,Snapdragon X Plus X1P-42-100,8,Integrated,Shared,Qualcomm Adreno,15,2880x1620,120,16,1024,SSD,1.42,Windows,71990
+Asus,Notebook,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,14,2450x1600,60,16,512,SSD,1.35,Windows,65990
+Asus,Notebook,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,16,1920x1200,60,16,512,SSD,1.74,Windows,72990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,14,1920x1200,60,16,512,SSD,1.4,Windows,78990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 5 330,4,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.4,Windows,67990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 5 330,4,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.7,Windows,76990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 5 330,4,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.7,Windows,70990
+Asus,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.4,Windows,82990
+Asus,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.4,Windows,72990
+Asus,Notebook,2023,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.4,Windows,66990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.4,Windows,56990
+Asus,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.7,Windows,92990
+Asus,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.7,Windows,81990
+Asus,Notebook,2023,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,16,1920x1200,60,16,512,SSD,1.7,Windows,68990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,16,512,SSD,1.7,Windows,60990
+Asus,Notebook,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,16,1920x1200,60,16,512,SSD,1.49,Windows,58990
+Asus,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.88,Windows,68990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 7 445,6,Integrated,Shared,AMD Radeon 860M,16,1920x1200,60,16,512,SSD,1.88,Windows,87990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,1920x1200,60,16,512,SSD,1.88,Windows,69990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 5 330,8,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.88,Windows,62990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,14,1920x1200,60,16,512,SSD,1.46,Windows,69990
+Asus,Notebook,2025,AMD,AMD Ryzen AI 5 330,8,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.46,Windows,61990
+Asus,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.46,Windows,65990
+Asus,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.46,Windows,68990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 3050,16,1920x1200,60,8,512,SSD,1.8,Windows,65990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 3050,16,1920x1200,60,8,512,SSD,1.8,Windows,64990
+Asus,Notebook,2023,Intel,Intel Core i5 12500H,12,Dedicated,4,RTX 2050,16,1920x1200,60,8,512,SSD,1.8,Windows,56990
+Asus,Notebook,2023,Intel,Intel Core i5 1340P,12,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,1024,SSD,1.6,Windows,68990
+Asus,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,2880x1620,120,8,512,SSD,1.6,Windows,65990
+Asus,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.6,Windows,54990
+Asus,Notebook,2023,Intel,Intel Core i7 13620H,8,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,63990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,60990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,10,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,56990
+Asus,Notebook,2023,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,8,512,SSD,1.88,Windows,57990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,8,512,SSD,1.88,Windows,58990
+Asus,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,8,512,SSD,1.88,Windows,61990
+Asus,Notebook,2023,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,8,512,SSD,1.88,Windows,64990
+Asus,Notebook,2023,Intel,Intel Core i7 13700H,14,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,8,512,SSD,1.88,Windows,64990
+Asus,Notebook,2023,Intel,Intel Core i9 13900H,14,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,8,512,SSD,1.88,Windows,66990
+Asus,Notebook,2023,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.4,Windows,55990
+Asus,Notebook,2023,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.4,Windows,53990
+Asus,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.4,Windows,46990
+Asus,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.4,Windows,42990
+Asus,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.4,Windows,40990
+Asus,Notebook,2023,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.7,Windows,55990
+Asus,Notebook,2023,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,53990
+Asus,Notebook,2023,Intel,Intel Core 3 100U,8,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.7,Windows,53990
+Asus,Notebook,2023,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.7,Windows,51990
+Asus,Notebook,2023,Intel,Intel Core 3 100U,8,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,47990
+Asus,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,46990
+Asus,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,46990
+Asus,Notebook,2023,Intel,Intel Core i5 1235U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,43990
+Asus,Notebook,2023,Intel,Intel Core i3 1215U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,33990
+Asus,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4070,16,2560x1600,240,16,1024,SSD,1.85,Windows,199990
+Asus,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,16,2560x1600,240,16,1024,SSD,1.85,Windows,174990
+Asus,Gaming,2024,AMD,AMD Ryzen 9 8945HS,8,Dedicated,8,RTX 4060,14,2880x1800,120,16,1024,SSD,1.5,Windows,149990
+Asus,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 4070,16,2560x1600,240,16,1024,SSD,2.5,Windows,199990
+Asus,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,12,RTX 4080,16,2560x1600,240,32,2048,SSD,2.65,Windows,279990
+Asus,Gaming,2023,Intel,Intel Core i7 13650HX,14,Dedicated,8,RTX 4070,16,1920x1200,165,16,1024,SSD,2.5,Windows,149990
+Asus,Gaming,2023,Intel,Intel Core i7 13650HX,14,Dedicated,6,RTX 4050,16,1920x1200,165,16,1024,SSD,2.5,Windows,113990
+Asus,Business,2025,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,16,512,SSD,1.4,Windows,45390
+Asus,Business,2025,Intel,Intel Core i3 1215U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.69,Windows,46990
+Asus,Business,2025,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,8,512,SSD,1.4,Windows,49990
+Asus,Business,2025,Intel,Intel Core i3 1215U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,8,512,SSD,1.49,Windows,50990
+Asus,Business,2025,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.62,Windows,53990
+Asus,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1080,60,16,512,SSD,1.42,Windows,64790
+Asus,Business,2025,Intel,Intel Core 5 210H,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.65,Windows,64990
+Asus,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.65,Windows,66990
+Asus,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1080,60,32,512,SSD,1.42,Windows,68990
+Asus,Business,2025,Intel,Intel Core 5 210H,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,32,512,SSD,1.65,Windows,68990
+Asus,Business,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.65,Windows,73130
+Asus,Business,2025,Intel,Intel Core 7 240H,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.65,Windows,78990
+Asus,Business,2025,Intel,Intel Core 7 240H,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,32,512,SSD,1.44,Windows,79990
+Asus,Business,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1080,60,16,1024,SSD,1.27,Windows,86990
+Asus,Business,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,32,1024,SSD,1.42,Windows,89990
+Asus,Business,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,1920x1080,60,32,1024,SSD,1.27,Windows,110990
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5050,15,2560x1600,165,16,512,SSD,1.9,Windows,159400
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5050,15,2560x1600,165,16,1024,SSD,1.9,Windows,167000
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5050,15,2560x1600,165,32,1024,SSD,1.9,Windows,181500
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5060,15,2560x1600,165,16,512,SSD,1.9,Windows,169400
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5060,15,2560x1600,165,16,1024,SSD,1.9,Windows,177000
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 260,8,Dedicated,8,RTX 5060,15,2560x1600,165,32,1024,SSD,1.9,Windows,191500
+Lenovo,Business,2024,AMD,AMD Ryzen 3 7335U,4,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,8,256,SSD,1.7,Windows,82250
+Lenovo,Business,2024,AMD,AMD Ryzen 3 7335U,4,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,32,1024,SSD,1.7,Windows,131050
+Lenovo,Business,2024,AMD,AMD Ryzen 3 7335U,4,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,16,512,SSD,1.7,Windows,96250
+Lenovo,Business,2024,AMD,AMD Ryzen 5 150,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,8,256,SSD,1.7,Windows,86340
+Lenovo,Business,2024,AMD,AMD Ryzen 5 150,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,32,1024,SSD,1.7,Windows,135150
+Lenovo,Business,2024,AMD,AMD Ryzen 5 150,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,16,512,SSD,1.7,Windows,100250
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,8,256,SSD,1.36,Windows,87900
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,32,1024,SSD,1.36,Windows,135400
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,16,512,SSD,1.36,Windows,101500
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,8,256,SSD,1.7,Windows,87500
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,32,1024,SSD,1.7,Windows,134900
+Lenovo,Business,2025,Intel,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,16,512,SSD,1.7,Windows,101000
+Lenovo,Gaming,2024,AMD,AMD Ryzen 5 7235HS,4,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.45,Windows,75990
+Lenovo,Gaming,2024,AMD,AMD Ryzen 5 7235HS,4,Dedicated,4,RTX 3050A,15,1920x1080,144,16,512,SSD,2.45,Windows,76990
+Lenovo,2-in-1 Convertible,2023,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,13,1920x1200,60,16,512,SSD,1.37,Windows,70990
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7533HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,8,256,SSD,1.7,Windows,82600
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7533HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,32,1024,SSD,1.7,Windows,131450
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7533HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,16,512,SSD,1.7,Windows,96550
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,8,256,SSD,1.7,Windows,86700
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,32,1024,SSD,1.7,Windows,135500
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,16,512,SSD,1.7,Windows,100700
+Lenovo,Notebook,2025,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 660M,13,1920x1200,60,16,512,SSD,1.17,Windows,74400
+Lenovo,Notebook,2025,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 660M,13,1920x1200,60,16,1024,SSD,1.17,Windows,82100
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,14,2240x1400,60,16,256,SSD,1.44,Windows,108500
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,14,2240x1400,60,32,1024,SSD,1.44,Windows,149500
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,14,2240x1400,60,16,512,SSD,1.44,Windows,111600
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,8,256,SSD,1.77,Windows,78600
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,32,1024,SSD,1.77,Windows,125200
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535HS,6,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,16,512,SSD,1.77,Windows,92200
+Lenovo,Gaming,2025,AMD,AMD Ryzen 5 7535HS,6,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.4,Windows,94600
+Lenovo,Gaming,2025,AMD,AMD Ryzen 5 7535HS,6,Dedicated,6,RTX 3050,15,1920x1080,144,16,1024,SSD,2.4,Windows,102500
+Lenovo,Business,2024,AMD,AMD Ryzen 5 PRO 8540U,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,8,512,SSD,1.3,Windows,132350
+Lenovo,Business,2024,AMD,AMD Ryzen 5 PRO 8540U,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,32,1024,SSD,1.3,Windows,182300
+Lenovo,Business,2024,AMD,AMD Ryzen 5 PRO 8540U,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,16,512,SSD,1.3,Windows,144800
+Lenovo,Business,2024,AMD,AMD Ryzen 7 170,8,Integrated,Shared,AMD Radeon 780M,16,1920x1200,60,8,256,SSD,1.7,Windows,91400
+Lenovo,Business,2024,AMD,AMD Ryzen 7 170,8,Integrated,Shared,AMD Radeon 780M,16,1920x1200,60,32,1024,SSD,1.7,Windows,140250
+Lenovo,Business,2024,AMD,AMD Ryzen 7 170,8,Integrated,Shared,AMD Radeon 780M,16,1920x1200,60,16,512,SSD,1.7,Windows,105350
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,14,1920x1200,60,8,256,SSD,1.36,Windows,94500
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,14,1920x1200,60,32,1024,SSD,1.36,Windows,142100
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,14,1920x1200,60,16,512,SSD,1.36,Windows,108100
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,16,1920x1200,60,8,256,SSD,1.7,Windows,94100
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,16,1920x1200,60,32,1024,SSD,1.7,Windows,141500
+Lenovo,Business,2025,Intel,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 760M,16,1920x1200,60,16,512,SSD,1.7,Windows,107700
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 250,8,Dedicated,8,RTX 5050,15,2560x1440,165,16,512,SSD,2.3,Windows,122600
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 250,8,Dedicated,8,RTX 5050,15,2560x1440,165,32,1024,SSD,2.3,Windows,142700
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 250,8,Dedicated,8,RTX 5060,15,2560x1440,165,16,512,SSD,2.3,Windows,130600
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 250,8,Dedicated,8,RTX 5060,15,2560x1440,165,16,1024,SSD,2.3,Windows,138100
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 250,8,Dedicated,8,RTX 5060,15,2560x1440,165,32,1024,SSD,2.3,Windows,152700
+Lenovo,Notebook,2023,AMD,AMD Ryzen 7 5825U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.6,Windows,66690
+Lenovo,Gaming,2024,AMD,AMD Ryzen 7 7435HS,8,Dedicated,4,RTX 3050A,15,1920x1080,144,24,512,SSD,2.38,Windows,114990
+Lenovo,Gaming,2024,AMD,AMD Ryzen 7 7435HS,8,Dedicated,6,RTX 4050,15,1920x1080,144,24,512,SSD,2.38,Windows,112990
+Lenovo,2-in-1 Convertible,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,13,1920x1200,60,16,1024,SSD,1.37,Windows,94990
+Lenovo,Notebook,2025,AMD,AMD Ryzen 7 7735HS,8,Integrated,Shared,AMD Radeon 680M,13,1920x1200,60,16,512,SSD,1.17,Windows,77800
+Lenovo,Notebook,2025,AMD,AMD Ryzen 7 7735HS,8,Integrated,Shared,AMD Radeon 680M,13,1920x1200,60,16,1024,SSD,1.17,Windows,85500
+Lenovo,Notebook,2025,AMD,AMD Ryzen 7 7735HS,8,Integrated,Shared,AMD Radeon 680M,15,1920x1200,60,16,512,SSD,1.56,Windows,77990
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 8745HX,8,Dedicated,8,RTX 5060,16,2560x1600,165,32,1024,SSD,2.5,Windows,165700
+Lenovo,Gaming,2025,AMD,AMD Ryzen 7 8745HX,8,Dedicated,8,RTX 5060,16,2560x1600,165,32,1024,SSD,2.5,Windows,233500
+Lenovo,Business,2024,AMD,AMD Ryzen 7 PRO 8840U,8,Integrated,Shared,AMD Radeon 780M,14,1920x1200,60,8,512,SSD,1.3,Windows,140300
+Lenovo,Business,2024,AMD,AMD Ryzen 7 PRO 8840U,8,Integrated,Shared,AMD Radeon 780M,14,1920x1200,60,32,1024,SSD,1.3,Windows,190300
+Lenovo,Business,2024,AMD,AMD Ryzen 7 PRO 8840U,8,Integrated,Shared,AMD Radeon 780M,14,1920x1200,60,16,512,SSD,1.3,Windows,152800
+Lenovo,Business,2024,AMD,AMD Ryzen 7735HS,8,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,8,256,SSD,1.7,Windows,92200
+Lenovo,Business,2024,AMD,AMD Ryzen 7735HS,8,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,32,1024,SSD,1.7,Windows,140550
+Lenovo,Business,2024,AMD,AMD Ryzen 7735HS,8,Integrated,Shared,AMD Radeon 680M,16,1920x1200,60,16,512,SSD,1.7,Windows,105750
+Lenovo,Business,2024,AMD,AMD Ryzen 7735HS,8,Integrated,Shared,AMD Radeon 780M,16,1920x1200,60,8,256,SSD,1.7,Windows,91300
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 8945HX,16,Dedicated,8,RTX 5060,16,2560x1600,165,16,1024,SSD,2.5,Windows,168600
+Lenovo,Gaming,2025,AMD,AMD Ryzen 9 8945HX,16,Dedicated,8,RTX 5060,16,2560x1600,165,16,1024,SSD,2.5,Windows,237300
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.49,Windows,70300
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,32,1024,SSD,1.49,Windows,88800
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.65,Windows,68700
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,1024,SSD,1.65,Windows,74100
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,32,1024,SSD,1.65,Windows,86500
+Lenovo,Creator,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,14,2944x1840,90,32,1024,SSD,1.53,Windows,118500
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,14,1920x1200,60,16,512,SSD,1.49,Windows,72200
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,14,2880x1800,120,32,1024,SSD,1.39,Windows,116600
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,1920x1200,60,16,512,SSD,1.65,Windows,71100
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,1920x1200,60,16,1024,SSD,1.65,Windows,77500
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,1920x1200,60,32,1024,SSD,1.65,Windows,88900
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5050,15,2560x1600,165,16,512,SSD,1.9,Windows,177400
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5050,15,2560x1600,165,16,1024,SSD,1.9,Windows,187200
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5050,15,2560x1600,165,32,1024,SSD,1.9,Windows,205900
+Lenovo,Notebook,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5050,16,2880x1800,120,32,1024,SSD,1.79,Windows,199990
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5060,15,2560x1600,165,16,512,SSD,1.9,Windows,187700
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5060,15,2560x1600,165,16,1024,SSD,1.9,Windows,197500
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5060,15,2560x1600,165,32,1024,SSD,1.9,Windows,216200
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5070,15,2560x1600,165,16,512,SSD,1.9,Windows,199200
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5070,15,2560x1600,165,16,1024,SSD,1.9,Windows,209000
+Lenovo,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5070,15,2560x1600,165,32,1024,SSD,1.9,Windows,227700
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 240H,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.36,Windows,74990
+Lenovo,Business,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.36,Windows,42990
+Lenovo,Business,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.36,Windows,44990
+Lenovo,Business,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.36,Windows,70990
+Lenovo,Business,2025,Intel,Intel Core 5 210H,8,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.75,Windows,59990
+Lenovo,Business,2025,Intel,Intel Core 7 240H,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.75,Windows,96500
+Lenovo,2-in-1 Convertible,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,2880x1800,60,16,512,SSD,1.49,Windows,95000
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.61,Windows,100990
+Lenovo,Notebook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.92,Windows,74990
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.35,Windows,88990
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.5,Windows,77600
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.5,Windows,80800
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,8,256,SSD,1.36,Windows,73300
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.36,Windows,110700
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.36,Windows,84000
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,8,256,SSD,1.7,Windows,100200
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,32,1024,SSD,1.7,Windows,121900
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.7,Windows,113000
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.39,Windows,96200
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.65,Windows,95800
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,2880x1800,120,16,1024,SSD,1.65,Windows,103100
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,2880x1800,120,32,1024,SSD,1.65,Windows,118300
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,256,SSD,1.64,Windows,126000
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.64,Windows,161500
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.64,Windows,128200
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.5,Windows,73800
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.5,Windows,77000
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,8,256,SSD,1.36,Windows,69400
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.36,Windows,106800
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.36,Windows,80000
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,8,256,SSD,1.7,Windows,95400
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,32,1024,SSD,1.7,Windows,140400
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.7,Windows,108300
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.38,Windows,106200
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.38,Windows,115900
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.29,Windows,103500
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.29,Windows,112500
+Lenovo,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.39,Windows,100990
+Lenovo,Business,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,4,RTX 500 Ada,14,1920x1200,60,32,1024,SSD,1.58,Windows,102490
+Lenovo,Business,2024,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.77,Windows,82990
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.5,Windows,89800
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,24,1024,SSD,1.5,Windows,101500
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,8,256,SSD,1.36,Windows,86600
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.36,Windows,127000
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.36,Windows,100300
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,1920x1200,60,8,256,SSD,1.7,Windows,119800
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,1920x1200,60,32,1024,SSD,1.7,Windows,164900
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.7,Windows,132700
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.39,Windows,104200
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.65,Windows,107700
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,16,1024,SSD,1.65,Windows,115000
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,32,1024,SSD,1.65,Windows,130200
+Lenovo,Creator,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,3000x1872,120,32,1024,SSD,1.5,Windows,129500
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5060,16,3200x2000,165,32,1024,SSD,2.2,Windows,279800
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5060,16,2560x1600,165,16,512,SSD,2.5,Windows,199200
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5060,16,2560x1600,240,32,1024,SSD,2.7,Windows,238000
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5070,16,2560x1600,165,16,512,SSD,2.5,Windows,225100
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5070,16,2560x1600,165,16,1024,SSD,2.5,Windows,217600
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5070,16,2560x1600,165,32,1024,SSD,2.5,Windows,241000
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,256,SSD,1.64,Windows,149400
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.64,Windows,184900
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.64,Windows,151600
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.32,Windows,186300
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.32,Windows,197300
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.38,Windows,120800
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.32,Windows,207500
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.29,Windows,117000
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.29,Windows,126000
+Lenovo,Ultrabook,2024,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,15,2880x1800,120,32,1024,SSD,1.53,Windows,151790
+Lenovo,Ultrabook,2025,Intel,Intel Core Ultra 9 185H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.35,Windows,110990
+Lenovo,Business,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5060,16,3200x2000,165,32,1024,SSD,2.2,Windows,293400
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5060,16,2560x1600,165,16,512,SSD,2.5,Windows,211000
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5060,16,2560x1600,240,32,1024,SSD,2.7,Windows,249300
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,165,16,512,SSD,2.5,Windows,230000
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,165,16,1024,SSD,2.5,Windows,236800
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,165,32,1024,SSD,2.5,Windows,252700
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,32,1024,SSD,2.57,Windows,333300
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,32,2048,SSD,2.57,Windows,362900
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,16,2560x1600,240,32,1024,SSD,2.57,Windows,385000
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,16,2560x1600,240,32,2048,SSD,2.57,Windows,414500
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,18,3840x2400,240,32,1024,SSD,3.5,Windows,428600
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,18,3840x2400,240,32,2048,SSD,3.5,Windows,457400
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,18,3840x2400,240,64,2048,SSD,3.5,Windows,492400
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,16,2560x1600,240,32,1024,SSD,2.72,Windows,438700
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,16,2560x1600,240,32,2048,SSD,2.72,Windows,468300
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,18,3840x2400,240,32,1024,SSD,3.5,Windows,474800
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,18,3840x2400,240,32,2048,SSD,3.5,Windows,503700
+Lenovo,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,24,RTX 5090,18,3840x2400,240,64,2048,SSD,3.5,Windows,538600
+Lenovo,Creator,2025,Intel,Intel Core Ultra 9 285H,16,Integrated,Shared,Intel Arc,14,3000x1872,120,32,1024,SSD,1.53,Windows,153000
+Lenovo,Notebook,2025,Intel,Intel Core Ultra 9 285H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.39,Windows,127900
+Lenovo,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.6,Windows,50990
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450H,8,Dedicated,8,RTX 3050,15,1920x1080,144,16,512,SSD,2.4,Windows,78990
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450H,8,Dedicated,8,RTX 4060,15,1920x1080,144,16,512,SSD,2.4,Windows,90990
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450HX,8,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.45,Windows,86990
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450HX,10,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.38,Windows,76500
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450HX,10,Dedicated,6,RTX 3050,15,1920x1080,144,24,512,SSD,2.38,Windows,96990
+Lenovo,Gaming,2024,AMD,Intel Core i5 12450HX,10,Dedicated,4,RTX 3050A,15,1920x1080,144,16,512,SSD,1.9,Windows,80500
+Lenovo,Gaming,2024,Intel,Intel Core i5 12450HX,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.38,Windows,72990
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,16,256,SSD,1.36,Windows,97600
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,32,1024,SSD,1.36,Windows,132000
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.36,Windows,99700
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,16,256,SSD,1.36,Windows,95000
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,16,512,SSD,1.36,Windows,97200
+Lenovo,Business,2025,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,16,1920x1200,60,16,1024,SSD,1.36,Windows,107800
+Lenovo,Gaming,2024,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.45,Windows,97990
+Lenovo,Gaming,2024,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,144,24,512,SSD,2.4,Windows,94990
+Lenovo,Gaming,2024,Intel,Intel Core i5 13450HX,10,Dedicated,4,RTX 3050A,15,1920x1080,144,24,512,SSD,2.38,Windows,104990
+Lenovo,Gaming,2024,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.45,Windows,108990
+Lenovo,Ultrabook,2023,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.35,Windows,67990
+Lenovo,Ultrabook,2023,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,1024,SSD,1.35,Windows,91990
+Lenovo,Gaming,2024,Intel,Intel Core i7 12650HX,14,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,1.77,Windows,92990
+Lenovo,2-in-1 Convertible,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,13,1920x1200,60,16,1024,SSD,1.34,Windows,206990
+Lenovo,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,14,3840x2400,60,16,1024,SSD,1.4,Windows,135000
+Lenovo,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,1024,SSD,1.49,Windows,104990
+Lenovo,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,13,2560x1600,90,16,1024,SSD,1.7,Windows,112990
+Lenovo,Notebook,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.34,Windows,76300
+Lenovo,Notebook,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,14,1920x1200,60,16,1024,SSD,1.34,Windows,83500
+Lenovo,Notebook,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,14,1920x1200,60,32,1024,SSD,1.34,Windows,98000
+Lenovo,Notebook,2025,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,15,1920x1200,60,16,512,SSD,1.63,Windows,85990
+Lenovo,Gaming,2024,Intel,Intel Core i7 13650HX,14,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.38,Windows,123000
+Lenovo,Gaming,2024,Intel,Intel Core i7 13650HX,14,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.45,Windows,118990
+Lenovo,Gaming,2024,Intel,Intel Core i7 13650HX,14,Dedicated,6,RTX 4050,15,1920x1080,144,24,512,SSD,2.38,Windows,127990
+Lenovo,Gaming,2025,Intel,Intel Core i7 13650HX,14,Dedicated,8,RTX 5070,15,2560x1600,165,16,512,SSD,1.9,Windows,165100
+Lenovo,Gaming,2025,Intel,Intel Core i7 13650HX,14,Dedicated,8,RTX 5070,15,2560x1600,165,16,1024,SSD,1.9,Windows,173300
+Lenovo,Gaming,2025,Intel,Intel Core i7 13650HX,14,Dedicated,8,RTX 5070,15,2560x1600,165,32,1024,SSD,1.9,Windows,190500
+Lenovo,Gaming,2025,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 5050,15,1920x1080,144,16,1024,SSD,2.4,Windows,141990
+Lenovo,Gaming,2025,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 5060,15,1920x1080,144,16,1024,SSD,2.4,Windows,132990
+Lenovo,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4060,15,1920x1080,144,16,1024,SSD,2.38,Windows,169000
+Lenovo,Gaming,2025,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 5050,15,1920x1080,144,16,1024,SSD,2.4,Windows,127500
+Lenovo,Gaming,2025,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 5060,15,1920x1080,144,16,1024,SSD,2.4,Windows,179000
+Lenovo,Gaming,2025,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 5060,15,1920x1080,144,32,1024,SSD,2.4,Windows,184500
+Lenovo,Gaming,2023,Intel,Intel Core i9 13980HX,24,Dedicated,16,RTX 4090,16,3200x1800,165,32,2048,SSD,2.5,Windows,450200
+Lenovo,Gaming,2025,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 5070,15,2560x1600,165,16,512,SSD,1.9,Windows,209300
+Lenovo,Gaming,2025,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 5070,15,2560x1600,165,16,1024,SSD,1.9,Windows,217400
+Lenovo,Gaming,2025,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 5070,15,2560x1600,165,32,1024,SSD,1.9,Windows,234600
+Lenovo,Ultrabook,2024,Qualcomm,Snapdragon X Elite X1E-78-100,12,Integrated,Shared,Qualcomm Adreno,14,2944x1840,90,32,1024,SSD,1.28,Windows,137990
+Lenovo,Notebook,2024,Qualcomm,Snapdragon X Plus X1P-42-100,8,Integrated,Shared,Qualcomm Adreno,14,1920x1200,60,16,1024,SSD,1.52,Windows,86990
+Lenovo,Ultrabook,2024,Qualcomm,Snapdragon X Plus X1P-64-100,10,Integrated,Shared,Qualcomm Adreno,14,2944x1840,90,32,1024,SSD,1.28,Windows,99900
+Lenovo,Business,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,16,1920x1200,60,16,1024,SSD,1.82,Windows,114300
+Lenovo,Business,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,16,1920x1200,60,32,1024,SSD,1.82,Windows,134600
+Lenovo,Notebook,2025,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,15,1920x1200,60,16,512,SSD,1.6,Windows,66990
+Lenovo,Business,2024,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.77,Windows,82990
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535U,6,Integrated,Shared,AMD Radeon 660M,14,1920x1200,60,16,512,SSD,1.53,Windows,75990
+Lenovo,Business,2024,AMD,AMD Ryzen 5 7535U,6,Integrated,Shared,AMD Radeon 660M,16,1920x1200,60,16,512,SSD,1.77,Windows,60990
+Lenovo,Business,2024,Intel,AMD Ryzen 5 PRO 8540U,6,Dedicated,Shared,AMD Radeon 740M,14,1920x1200,60,8,512,SSD,1.3,Windows,125000
+Lenovo,Business,2024,Qualcomm,Snapdragon X Plus X1P-42-100,8,Integrated,Shared,Qualcomm Adreno,14,1920x1200,60,16,512,SSD,1.24,Windows,177300
+Lenovo,Business,2024,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.3,Windows,148400
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.28,Windows,157100
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,15,2880x1800,120,32,512,SSD,1.5,Windows,179990
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,15,2880x1800,120,32,1024,SSD,1.5,Windows,199990
+Lenovo,Business,2024,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,0.99,Windows,192200
+Lenovo,Business,2024,Intel,Intel Core Ultra 5 228V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,32,512,SSD,1.28,Windows,153600
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.45,Windows,231700
+Lenovo,Business,2024,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.01,Windows,159400
+Lenovo,Business,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,8,512,SSD,1.35,Windows,76990
+Lenovo,Business,2025,Intel,Intel Core 5 210H,8,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.35,Windows,104990
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.35,Windows,227500
+Lenovo,Business,2025,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.35,Windows,151500
+Lenovo,Business,2025,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.77,Windows,149990
+Lenovo,Business,2025,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.39,Windows,146400
+Lenovo,Business,2025,AMD,AMD Ryzen AI 9 HX PRO 370,12,Integrated,Shared,AMD Radeon 890M,14,1920x1200,60,64,2048,SSD,1.39,Windows,339600
+Lenovo,Business,2025,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,14,1920x1200,60,16,512,SSD,1.71,Windows,150300
+Lenovo,Business,2025,AMD,AMD Ryzen AI 9 HX PRO 370,12,Integrated,Shared,AMD Radeon 890M,14,1920x1200,60,96,2048,SSD,1.71,Windows,443000
+Lenovo,Business,2024,Intel,Intel Core Ultra 5 228V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,32,512,SSD,1.48,Windows,157490
+Lenovo,Business,2024,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.48,Windows,199990
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,16,1920x1200,60,32,512,SSD,1.77,Windows,189490
+Lenovo,Business,2024,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.23,Windows,162800
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,8,256,SSD,1.77,Windows,102900
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.38,Windows,108490
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.38,Windows,119990
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,256,SSD,1.39,Windows,201500
+Lenovo,Business,2025,AMD,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,16,512,SSD,1.69,Windows,66990
+Lenovo,Business,2025,AMD,AMD Ryzen 7 250,8,Integrated,Shared,AMD Radeon 780M,16,1920x1200,60,16,512,SSD,1.69,Windows,70990
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.35,Windows,105990
+Lenovo,Business,2025,AMD,AMD Ryzen 5 PRO 215,6,Integrated,Shared,AMD Radeon 780M,14,1920x1200,60,8,256,SSD,1.36,Windows,91200
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.69,Windows,82990
+Lenovo,Business,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.69,Windows,59990
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,13,1920x1200,60,16,512,SSD,1.05,Windows,159990
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,13,1920x1200,60,16,1024,SSD,1.05,Windows,184990
+Lenovo,Business,2025,AMD,AMD Ryzen 3 PRO 210,4,Integrated,Shared,AMD Radeon 740M,16,1920x1200,60,16,256,SSD,1.77,Windows,101500
+Lenovo,Business,2025,AMD,AMD Ryzen 5 220,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,16,512,SSD,1.35,Windows,74990
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.58,Windows,183490
+Lenovo,Business,2025,AMD,AMD Ryzen AI 5 PRO 340,6,Integrated,Shared,AMD Radeon 840M,16,1920x1200,60,16,512,SSD,1.36,Windows,119000
+Lenovo,Business,2025,Intel,Intel Core Ultra 7 255H,16,Dedicated,8,RTX 5060,16,1920x1200,60,16,512,SSD,1.84,Windows,346900
+Lenovo,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,13,1920x1200,60,16,256,SSD,1.3,Windows,137900
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,13,1920x1200,60,16,256,SSD,1.21,Windows,115900
+Lenovo,2-in-1 Convertible,2025,AMD,AMD Ryzen 3 PRO 210,4,Integrated,Shared,AMD Radeon 740M,13,1920x1200,60,16,256,SSD,1.3,Windows,122900
+Lenovo,Business,2025,AMD,AMD Ryzen 3 PRO 210,4,Integrated,Shared,AMD Radeon 740M,13,1920x1200,60,16,256,SSD,1.21,Windows,112400
+Lenovo,Business,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.32,Windows,81990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 5 225U,12,Integrated,Shared,Intel Arc,15,1920x1080,60,16,512,SSD,1.55,Windows,79999
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 7 255U,12,Integrated,Shared,Intel Arc,15,1920x1080,60,32,1024,SSD,1.55,Windows,87999
+Samsung,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,15,1920x1080,60,16,512,SSD,1.45,Windows,122990
+Samsung,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,15,1920x1080,60,16,1024,SSD,1.45,Windows,138990
+Samsung,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,15,1920x1080,60,32,1024,SSD,1.45,Windows,154990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.23,Windows,139990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.23,Windows,155990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.23,Windows,171990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.56,Windows,149990
+Samsung,Ultrabook,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,16,2880x1800,120,32,1024,SSD,1.56,Windows,181990
+Samsung,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.56,Windows,163990
+Samsung,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,16,2880x1800,120,32,1024,SSD,1.56,Windows,195990
+Samsung,Ultrabook,2024,Intel,Intel Core 5 120U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.55,Windows,79990
+Samsung,Ultrabook,2024,Intel,Intel Core 7 150U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.55,Windows,89990
+Samsung,Ultrabook,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,6,512,SSD,1.55,Windows,67990
+Samsung,Ultrabook,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.55,Windows,73990
+Samsung,Ultrabook,2024,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.55,Windows,83990
+Samsung,2-in-1 Convertible,2024,Intel,Intel Core 7 150U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.46,Windows,122990
+Samsung,Ultrabook,2024,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,15,1920x1080,60,16,512,SSD,1.4,Windows,76990
+Samsung,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.23,Windows,160090
+Samsung,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.56,Windows,172490
+Samsung,Ultrabook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,16,2880x1800,120,16,512,SSD,1.56,Windows,130890
+Samsung,Ultrabook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,16,2880x1800,120,14,512,SSD,1.56,Windows,151790
+Samsung,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,32,1024,SSD,1.56,Windows,164990
+Samsung,2-in-1 Convertible,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,16,2880x1800,120,16,1024,SSD,1.66,Windows,206990
+Samsung,Ultrabook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.58,Windows,57690
+Samsung,Ultrabook,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.58,Windows,69690
+Samsung,2-in-1 Convertible,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,13,1920x1080,60,16,512,SSD,1.16,Windows,96790
+Samsung,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,14,2880x1800,120,16,512,SSD,1.17,Windows,126990
+Samsung,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,14,2880x1800,120,16,1024,SSD,1.17,Windows,140990
+Samsung,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,16,2880x1800,120,16,512,SSD,1.56,Windows,135990
+Samsung,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,16,2880x1800,120,16,1024,SSD,1.56,Windows,149990
+Samsung,2-in-1 Convertible,2023,Intel,Intel Core i5 1340P,12,Integrated,Shared,Intel Iris Xe,16,2880x1800,120,16,512,SSD,1.66,Windows,140990
+Samsung,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,16,2880x1800,120,16,512,SSD,1.66,Windows,147990
+Samsung,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,16,2880x1800,120,16,1024,SSD,1.66,Windows,162990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra 7 355,8,Integrated,Shared,Intel Arc,16,1920x1200,120,16,512,SSD,1.85,Windows,117990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra 7 355,8,Integrated,Shared,Intel Arc,16,1920x1200,120,16,1024,SSD,1.85,Windows,136990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra 7 356H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.24,Windows,178990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra 7 356H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.24,Windows,184990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra 7 356H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.24,Windows,204990
+Samsung,Ultrabook,2026,Intel,Intel Core Ultra X7 358H,16,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.24,Windows,214990
+Samsung,Creator,2026,Intel,Intel Core Ultra 7 356H,16,Dedicated,8,RTX 5070,16,2880x1800,120,32,1024,SSD,1.79,Windows,310990
+Samsung,Creator,2026,Intel,Intel Core Ultra X7 358H,16,Dedicated,8,RTX 5070,16,2880x1800,120,32,1024,SSD,1.79,Windows,242990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 285HX,24,Dedicated,24,RTX 5090,18,3840x2400,120,64,6144,SSD,3.6,Windows,587990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 285HX,24,Dedicated,24,RTX 5090,18,3840x2400,120,64,4092,SSD,3.6,Windows,499990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 285HX,24,Dedicated,16,RTX 5080,18,3840x2400,120,64,4092,SSD,3.6,Windows,481990
+MSI,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,12,RTX 4080,18,2560x1600,240,32,2048,SSD,3.1,Windows,339990
+MSI,Gaming,2025,AMD,AMD Ryzen 9 9955HX,16,Dedicated,12,RTX 5070 Ti,18,2560x1600,240,32,2048,SSD,3.6,Windows,269990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,16,2560x1600,240,32,1024,SSD,2.7,Windows,299990
+MSI,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 4070,16,2560x1600,240,16,1024,SSD,2.67,Windows,182990
+MSI,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,2.7,Windows,197990
+MSI,Gaming,2023,Intel,Intel Core i9 13980HX,24,Dedicated,12,RTX 4080,16,2560x1600,240,32,1024,SSD,2.67,Windows,273990
+MSI,Gaming,2025,AMD,AMD Ryzen 9 9955HX,16,Dedicated,16,RTX 5080,18,2560x1600,240,32,2048,SSD,3.6,Windows,339990
+MSI,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,16,1024,SSD,2.7,Windows,197999
+MSI,Gaming,2023,Intel,Intel Core i9 13980HX,24,Dedicated,16,RTX 4090,17,2560x1600,240,32,2048,SSD,3,Windows,328990
+MSI,Gaming,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 4060,16,2560x1600,240,32,1024,SSD,1.99,Windows,219990
+MSI,Gaming,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,1.99,Windows,227990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,16,2560x1600,240,32,1024,SSD,1.99,Windows,199990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,14,1920x1200,165,16,1024,SSD,1.7,Windows,192990
+MSI,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,8,RTX 4060,15,2560x1440,240,16,1024,SSD,2.1,Windows,170990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4070,14,2880x1800,120,32,1024,SSD,1.7,Windows,229990
+MSI,Gaming,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 4070,17,2560x1440,240,16,2048,SSD,2.8,Windows,282990
+MSI,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,1024,SSD,2.1,Windows,132990
+MSI,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4070,16,2560x1600,240,32,2048,SSD,1.99,Windows,249990
+MSI,Gaming,2024,AMD,AMD Ryzen AI 9 365,10,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,2.1,Windows,220990
+MSI,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,12,RTX 4080,18,3840x2400,120,32,2048,SSD,2.89,Windows,349990
+MSI,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.5,Windows,189990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.5,Windows,184990
+MSI,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.5,Windows,205990
+MSI,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.5,Windows,179990
+MSI,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.5,Windows,175990
+MSI,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5070,17,2560x1600,240,16,1024,SSD,2.8,Windows,179990
+MSI,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.5,Windows,159990
+MSI,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,2.5,Windows,175990
+MSI,Gaming,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 4070,17,2560x1440,240,16,1024,SSD,2.7,Windows,154990
+MSI,Gaming,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 4060,15,1920x1080,360,16,1024,SSD,2.3,Windows,154990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,16,2560x1600,240,16,1024,SSD,2.5,Windows,149990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4070,17,2560x1600,240,16,1024,SSD,2.8,Windows,174990
+MSI,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,2.5,Windows,184990
+MSI,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4070,17,2560x1600,240,32,1024,SSD,2.8,Windows,189990
+MSI,Gaming,2025,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 5060,15,2560x1440,165,16,1024,SSD,2.4,Windows,142990
+MSI,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5060,15,2560x1440,165,16,1024,SSD,2.4,Windows,140500
+MSI,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 3050,15,1920x1080,144,16,1024,SSD,2.25,Windows,80990
+MSI,Gaming,2024,AMD,AMD Ryzen 7 8845HS,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.25,Windows,104990
+MSI,Gaming,2025,Intel,Intel Core i5 14450HX,10,Dedicated,8,RTX 5050,15,1920x1080,144,16,512,SSD,2.4,Windows,102990
+MSI,Gaming,2024,AMD,AMD Ryzen 7 8840H,8,Dedicated,6,RTX 4050,15,1920x1080,144,15,512,SSD,2.25,Windows,107990
+MSI,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5050,15,2560x1440,165,16,512,SSD,2.4,Windows,114990
+MSI,Gaming,2024,AMD,AMD Ryzen 9 8945HS,8,Dedicated,6,RTX 4050,17,1920x1080,144,16,1024,SSD,2.6,Windows,114000
+MSI,Gaming,2024,Intel,Intel Core i7 13620H,14,Dedicated,6,RTX 4050,15,1920x1080,144,16,1024,SSD,2.25,Windows,102990
+MSI,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,6,RTX 4050,16,1920x1200,144,16,1024,SSD,2.3,Windows,124990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,15,1920x1200,144,16,1024,SSD,1.9,Windows,104990
+MSI,Gaming,2024,Intel,Intel Core Ultra 5 125H,14,Dedicated,6,RTX 4050,15,1920x1080,144,16,1024,SSD,1.9,Windows,99990
+MSI,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,6,RTX 4050,15,1920x1080,144,16,1024,SSD,1.9,Windows,107990
+MSI,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,14,1920x1200,144,8,512,SSD,1.6,Windows,57990
+MSI,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5060,15,1920x1080,144,16,1024,SSD,2.1,Windows,122990
+MSI,Gaming,2025,Intel,Intel Core 5 210H,8,Dedicated,8,RTX 5050,15,1920x1080,144,16,512,SSD,2.1,Windows,99990
+MSI,Gaming,2024,Intel,Intel Core i7 13620H,14,Dedicated,8,RTX 4060,15,1920x1080,144,16,512,SSD,1.98,Windows,106990
+MSI,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 3050,15,1920x1080,144,16,512,SSD,1.86,Windows,72490
+MSI,Gaming,2023,Intel,Intel Core i7 13620H,14,Dedicated,4,RTX 3050,15,1920x1080,144,16,512,SSD,1.86,Windows,78990
+MSI,Gaming,2023,AMD,AMD Ryzen 5 7535HS,6,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,1.86,Windows,62990
+MSI,Gaming,2023,AMD,AMD Ryzen 7 7735HS,8,Dedicated,4,RTX 3050,15,1920x1080,144,16,1024,SSD,1.86,Windows,67500
+MSI,Creator,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4070,17,2560x1600,165,32,2048,SSD,2.49,Windows,304990
+MSI,Creator,2023,Intel,Intel Core i7 13700H,14,Dedicated,6,RTX A1000,16,2560x1600,60,16,1024,SSD,2.29,Windows,178990
+MSI,Creator,2023,Intel,Intel Core i7 13700H,14,Dedicated,8,RTX 2000 Ada,16,2560x1600,60,32,1024,SSD,2.29,Windows,265990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1200,144,16,1024,SSD,1.7,Windows,91990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,6,RTX 4050,16,2560x1600,60,32,1024,SSD,1.6,Windows,145990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,16,2560x1600,60,32,1024,SSD,1.6,Windows,154990
+MSI,Notebook,2023,Intel,Intel Core i7 13700H,14,Dedicated,4,RTX 2050,16,2560x1600,165,16,1024,SSD,2.1,Windows,136990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,13,2880x1800,60,16,1024,SSD,0.99,Windows,91990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,13,2880x1800,60,16,1024,SSD,0.99,Windows,104990
+MSI,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,16,2560x1600,60,16,1024,SSD,1.5,Windows,109990
+MSI,Ultrabook,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,13,1920x1200,60,16,1024,SSD,0.99,Windows,81990
+MSI,Notebook,2023,Intel,Intel Core i7 13700H,14,Dedicated,6,RTX 4050,16,2560x1600,165,16,1024,SSD,2.1,Windows,164990
+MSI,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,13,1920x1200,60,32,1024,SSD,1.35,Windows,149990
+MSI,2-in-1 Convertible,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,13,1920x1200,60,32,1024,SSD,1.39,Windows,136990
+MSI,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,13,1920x1200,60,16,1024,SSD,1.35,Windows,134990
+MSI,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Iris Xe,14,2560x1600,60,16,1024,SSD,1.6,Windows,132990
+MSI,2-in-1 Convertible,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,13,1920x1200,60,16,1024,SSD,1.39,Windows,123990
+MSI,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,49900
+MSI,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,14,1920x1080,60,16,512,SSD,1.4,Windows,52990
+MSI,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.6,Windows,63990
+MSI,Notebook,2023,Intel,Intel Core i9 13900H,14,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,1024,SSD,1.6,Windows,78990
+MSI,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.7,Windows,64990
+MSI,Notebook,2025,Intel,Intel Core Ultra 7 255H,16,Integrated,Shared,Intel Arc,15,1920x1080,60,16,1024,SSD,1.9,Windows,75990
+MSI,Notebook,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.7,Windows,60990
+MSI,Notebook,2023,Intel,Intel Core i7 13700H,14,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,1024,SSD,1.9,Windows,72990
+MSI,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.4,Windows,52990
+MSI,Notebook,2023,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.75,Windows,42999
+MSI,Notebook,2023,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,14,1920x1080,60,8,512,SSD,1.4,Windows,46990
+MSI,Notebook,2023,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.75,Windows,47999
+MSI,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,39999
+MSI,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.75,Windows,45990
+MSI,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,8,512,SSD,1.4,Windows,44990
+MSI,Notebook,2023,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,16,512,SSD,1.4,Windows,44990
+MSI,Notebook,2024,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,14,1920x1080,60,16,512,SSD,1.4,Windows,44990
+MSI,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.9,Windows,57990
+MSI,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.6,Windows,63900
+MSI,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,8,512,SSD,1.4,Windows,55480
+MSI,Business,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,15,1920x1080,144,16,512,SSD,1.9,Windows,63990
+MSI,Business,2025,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,15,1920x1080,144,16,1024,SSD,1.9,Windows,74990
+MSI,Business,2025,Intel,Intel Core Ultra 5 125H,14,Dedicated,6,RTX 3050,15,1920x1080,144,16,1024,SSD,1.9,Windows,87990
+MSI,Business,2025,Intel,Intel Core Ultra 7 155H,16,Dedicated,6,RTX 4050,15,1920x1080,144,16,1024,SSD,1.9,Windows,100990
+MSI,Business,2025,AMD,AMD Ryzen 7 260,8,Integrated,Shared,AMD Radeon 760M,15,1920x1080,144,16,1024,SSD,1.9,Windows,79990
+MSI,Business,2025,AMD,AMD Ryzen 7 350,8,Integrated,Shared,AMD Radeon 860M,15,1920x1080,144,16,1024,SSD,1.9,Windows,99990
+MSI,Business,2025,AMD,AMD Ryzen 7 350,8,Dedicated,8,RTX 5050,15,1920x1080,144,16,1024,SSD,1.9,Windows,124990
+Acer,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,6,RTX 4050,16,1920x1200,165,16,1024,SSD,2.8,Windows,117990
+Acer,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5060,16,2560x1600,240,16,1024,SSD,2.3,Windows,168960
+Acer,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4060,16,2560x1600,165,16,1024,SSD,2.8,Windows,138590
+Acer,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 4070,16,2560x1600,165,16,1024,SSD,2.8,Windows,196990
+Acer,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5050,16,2560x1600,240,16,1024,SSD,2.3,Windows,154999
+Acer,Gaming,2025,Intel,Intel Core Ultra 7 255HX,20,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.3,Windows,179990
+Acer,Gaming,2023,Intel,Intel Core i7 13700HX,20,Dedicated,8,RTX 4060,16,2560x1600,165,16,1024,SSD,2.6,Windows,149999
+Acer,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,6,RTX 4050,14,1920x1200,120,16,1024,SSD,1.9,Windows,126990
+Acer,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,240,16,1024,SSD,2.3,Windows,220990
+Acer,Gaming,2023,Intel,Intel Core i5 13500HX,14,Dedicated,6,RTX 4050,16,1920x1200,165,16,1024,SSD,2.6,Windows,85990
+Acer,Gaming,2023,Intel,Intel Core i7 13700HX,20,Dedicated,6,RTX 4050,16,1920x1200,165,16,1024,SSD,2.6,Windows,94990
+Acer,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,12,RTX 4080,16,2560x1600,165,16,1024,SSD,2.65,Windows,248000
+Acer,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 4070,16,2560x1600,165,16,1024,SSD,2.65,Windows,193999
+Acer,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4070,16,2560x1600,240,16,1024,SSD,2.65,Windows,171990
+Acer,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 3050,16,1920x1200,165,16,512,SSD,1.95,Windows,62990
+Acer,Gaming,2025,Intel,Intel Core i5 13420H,8,Dedicated,8,RTX 5050,15,1920x1080,165,16,512,SSD,2.1,Windows,87990
+Acer,Gaming,2023,AMD,AMD Ryzen 5 6600H,6,Dedicated,6,RTX 3050,15,1920x1080,165,16,512,SSD,2.1,Windows,69990
+Acer,Gaming,2025,Intel,Intel Core 5 210H,14,Dedicated,8,RTX 5050,16,1920x1200,180,16,512,SSD,2.1,Windows,99990
+Acer,Gaming,2023,AMD,AMD Ryzen 5 7535HS,6,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.1,Windows,58990
+Acer,Gaming,2025,Intel,Intel Core 5 210H,14,Dedicated,6,RTX 4050,15,1920x1080,165,16,512,SSD,2.1,Windows,94990
+Acer,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.1,Windows,76910
+Acer,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 3050,16,1920x1200,165,16,512,SSD,1.95,Windows,78999
+Acer,Gaming,2025,Intel,Intel Core i7 13620H,10,Dedicated,8,RTX 5050,15,1920x1080,165,16,512,SSD,2.1,Windows,105990
+Acer,Gaming,2024,Intel,Intel Core i5 14450HX,10,Dedicated,6,RTX 4050,16,1920x1200,165,16,512,SSD,2.5,Windows,105755
+Acer,Gaming,2025,Intel,Intel Core i7 13620H,10,Dedicated,8,RTX 5060,15,1920x1080,165,16,512,SSD,2.1,Windows,119990
+Acer,Gaming,2023,AMD,AMD Ryzen 7 7735HS,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.1,Windows,87999
+Acer,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 4050,15,1920x1080,165,16,512,SSD,2.1,Windows,89989
+Acer,Gaming,2023,Intel,Intel Core i7 12650H,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.6,Windows,95500
+Acer,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 4050,16,1920x1200,165,16,512,SSD,1.95,Windows,99999
+Acer,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 4050,16,1920x1200,165,16,512,SSD,1.95,Windows,79990
+Acer,Gaming,2023,AMD,AMD Ryzen 7 7445HS,8,Dedicated,6,RTX 4050,15,1920x1080,165,16,512,SSD,2.1,Windows,78990
+Acer,Notebook,2025,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,11,1366x768,60,8,128,SSD,1,Windows,29990
+Acer,Notebook,2025,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,11,1366x768,60,8,256,SSD,1,Windows,37900
+Acer,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.79,Windows,55268
+Acer,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,1024,SSD,1.79,Windows,59990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.79,Windows,49748
+Acer,Notebook,2025,Intel,Intel Celeron N4500,2,Integrated,Shared,Intel UHD,11,1366x768,60,8,512,SSD,1,Windows,31000
+Acer,Notebook,2026,Intel,Intel Pentium Silver N6000,4,Integrated,Shared,Intel UHD,15,1366x768,60,12,512,SSD,1.5,Windows,39500
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.79,Windows,49327
+Acer,Notebook,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,15,1920x1080,60,16,512,SSD,1.99,Windows,54990
+Acer,Notebook,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.5,Windows,59990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,1024,SSD,1.79,Windows,51990
+Acer,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.79,Windows,42990
+Acer,Notebook,2023,AMD,AMD Ryzen 3 7330U,4,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.79,Windows,44500
+Acer,Notebook,2023,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,15,1920x1080,60,8,512,SSD,1.99,Windows,57990
+Acer,Notebook,2023,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel Iris Xe,14,2880x1800,60,16,512,SSD,1.25,Windows,53990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7520U,4,Integrated,Shared,AMD Radeon 610M,15,1920x1080,60,8,512,SSD,1.78,Windows,46990
+Acer,Notebook,2023,AMD,AMD Ryzen 3 7330U,4,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,2,Windows,44999
+Acer,Notebook,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.75,Windows,60727
+Acer,Notebook,2023,Intel,Intel Core i5 1335U,10,Dedicated,4,RTX 2050,15,1920x1080,60,16,512,SSD,1.78,Windows,62303
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.79,Windows,49938
+Acer,Notebook,2023,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.75,Windows,44990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1,Windows,48965
+Acer,Notebook,2025,Intel,Intel Core 7 240H,10,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,1.99,Windows,79990
+Acer,Notebook,2023,AMD,AMD Ryzen 3 7330U,16,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.59,Windows,49980
+Acer,Notebook,2025,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.7,Windows,48999
+Acer,Notebook,2025,Intel,Intel Core 7 240H,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,1.99,Windows,83990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 3500U,4,Integrated,Shared,AMD Radeon,14,1366x768,60,8,256,SSD,1.6,Windows,35000
+Acer,Notebook,2023,AMD,AMD Ryzen 5 5625U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,1024,SSD,1.59,Windows,49990
+Acer,Notebook,2023,AMD,AMD Ryzen 5 5625U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.59,Windows,47800
+Acer,Notebook,2023,AMD,AMD Ryzen 5 5625U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.59,Windows,50658
+Acer,Notebook,2025,Intel,Intel Core 5 210H,14,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,1.99,Windows,71990
+Acer,Notebook,2025,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.5,Windows,58999
+Acer,Notebook,2023,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.7,Windows,68390
+Acer,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,1024,SSD,1.59,Windows,54990
+Acer,Notebook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.59,Windows,54990
+Acer,Notebook,2023,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.59,Windows,46990
+Acer,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,14,1920x1080,60,16,512,SSD,1.45,Windows,48990
+Acer,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,14,1920x1080,60,16,1024,SSD,1.45,Windows,57990
+Acer,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,14,1920x1080,60,8,512,SSD,1.45,Windows,51990
+Acer,Notebook,2026,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.5,Windows,54990
+Acer,Notebook,2025,AMD,AMD Ryzen 7 5700U,4,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.5,Windows,50990
+Acer,Notebook,2025,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.5,Windows,59990
+Acer,Notebook,2025,Intel,Intel Core Ultra 5 120U,10,Integrated,Shared,Intel Arc,15,1920x1080,60,16,512,SSD,1.77,Windows,55257
+Acer,Notebook,2023,Intel,Intel Core i5 13420H,8,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.7,Windows,59990
+Acer,Notebook,2025,Intel,Intel Core 5 210H,8,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.44,Windows,58990
+Acer,Notebook,2024,Intel,Intel Core i5 13500H,12,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.44,Windows,52990
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.3,Windows,75990
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 5 115U,10,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.3,Windows,63000
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 5 115U,10,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.1,Windows,60990
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.3,Windows,64500
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.3,Windows,74990
+Acer,Ultrabook,2025,Intel,Intel Core Ultra 5 115U,10,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.3,Windows,64530
+Acer,Ultrabook,2023,AMD,AMD Ryzen 5 7430U,6,Integrated,Shared,AMD Radeon,14,1920x1080,60,16,512,SSD,1.25,Windows,38990
+Acer,Ultrabook,2023,Intel,Intel Core i7 13700H,14,Integrated,Shared,Intel Iris Xe,14,2880x1800,60,16,1024,SSD,1.25,Windows,62990
+Acer,Ultrabook,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,14,1920x1080,60,16,512,SSD,1.25,Windows,49990
+Acer,Ultrabook,2023,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.32,Windows,88000
+Acer,Ultrabook,2024,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.28,Windows,81990
+Acer,Ultrabook,2023,AMD,AMD Ryzen 7 7530U,6,Integrated,Shared,AMD Radeon,14,1920x1080,60,8,512,SSD,1.25,Windows,56990
+Acer,Ultrabook,2024,Qualcomm,Snapdragon X Plus X1P-64-100,10,Integrated,Shared,Qualcomm Adreno,14,1920x1200,60,16,512,SSD,1.32,Windows,65000
+HP,Gaming,2024,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 4060,16,1920x1080,144,16,1024,SSD,2.32,Windows,134890
+HP,Gaming,2025,Intel,Intel Core i7 14650HX,16,Dedicated,8,RTX 5050,16,1920x1200,165,24,1024,SSD,2.43,Windows,142990
+HP,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5050,16,1920x1200,165,24,1024,SSD,2.43,Windows,129990
+HP,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4060,16,1920x1080,165,16,1024,SSD,2.32,Windows,142990
+HP,Gaming,2024,AMD,AMD Ryzen 7 7840HS,8,Dedicated,6,RTX 4050,16,1920x1080,165,16,1024,SSD,2.37,Windows,123650
+HP,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,6,RTX 3050,16,1920x1080,165,16,512,SSD,2.35,Windows,126000
+HP,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Dedicated,8,RTX 5050,16,1920x1200,165,24,1024,SSD,2.44,Windows,134990
+HP,Gaming,2025,Intel,Intel Core i9 14900HX,24,Dedicated,8,RTX 5060,16,1920x1200,165,24,1024,SSD,2.43,Windows,191099
+HP,Gaming,2025,AMD,AMD Ryzen 9 8940HX,16,Dedicated,8,RTX 5060,16,1920x1200,165,24,1024,SSD,2.44,Windows,154990
+HP,Gaming,2023,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 4050,16,1920x1080,144,16,512,SSD,2.32,Windows,118100
+HP,Gaming,2023,AMD,AMD Ryzen 7 7840HS,8,Dedicated,8,RTX 4060,16,1920x1080,165,16,512,SSD,2.32,Windows,130990
+HP,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 4050,16,1920x1080,144,16,1024,SSD,2.32,Windows,128990
+HP,Gaming,2025,Intel,Intel Core Ultra 7 255H,16,Dedicated,8,RTX 5050,16,1920x1200,165,24,1024,SSD,2.43,Windows,149990
+HP,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,8,RTX 4060,16,1920x1080,144,16,1024,SSD,2.3,Windows,146100
+HP,Gaming,2024,Intel,Intel Core i7 14700HX,20,Dedicated,8,RTX 4070,16,1920x1080,165,16,1024,SSD,2.32,Windows,189599
+HP,Gaming,2023,AMD,AMD Ryzen 7 7840HS,8,Dedicated,6,RTX 4050,16,1920x1080,165,16,1024,SSD,2.32,Windows,107990
+HP,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 4060,16,1920x1080,165,16,512,SSD,2.32,Windows,142990
+HP,Gaming,2023,Intel,Intel Core i5 13500HX,14,Dedicated,6,RTX 4050,16,1920x1080,165,16,512,SSD,2.32,Windows,124990
+HP,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,8,RTX 4070,16,2560x1600,240,16,1024,SSD,2.09,Windows,187990
+HP,Gaming,2023,Intel,Intel Core i7 13700HX,16,Dedicated,6,RTX 4050,16,1920x1200,165,16,512,SSD,2.09,Windows,140990
+HP,Gaming,2025,AMD,AMD Ryzen AI 7 350,8,Integrated,Shared,AMD Radeon 860M,16,1920x1200,165,24,1024,SSD,2.44,Windows,152990
+HP,Gaming,2024,AMD,AMD Ryzen 9 7940HS,8,Dedicated,8,RTX 4070,16,1920x1080,165,16,1024,SSD,2.37,Windows,150990
+HP,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,32,1024,SSD,2.75,Windows,282490
+HP,Gaming,2025,Intel,Intel Core Ultra 9 285H,16,Dedicated,8,RTX 5070,16,1920x1200,165,32,1024,SSD,2.42,Windows,187490
+HP,Gaming,2023,AMD,AMD Ryzen 7 7445H,6,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,2.29,Windows,65990
+HP,Gaming,2025,Intel,Intel Core i5 14450HX,10,Dedicated,6,RTX 4050,15,1920x1080,144,24,512,SSD,2.31,Windows,93990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,84990
+HP,Gaming,2025,AMD,AMD Ryzen 7 260,8,Dedicated,8,RTX 5050,15,1920x1080,144,24,1024,SSD,2.29,Windows,108990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.29,Windows,77880
+HP,Gaming,2025,AMD,AMD Ryzen 7 7445HS,6,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,82990
+HP,Gaming,2025,Intel,Intel Core i5 14450HX,10,Dedicated,6,RTX 3050,16,1920x1080,144,16,512,SSD,2.31,Windows,82780
+HP,Gaming,2025,AMD,AMD Ryzen 7 7445HS,6,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,2.29,Windows,69990
+HP,Gaming,2025,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 3050,15,1920x1080,144,16,512,SSD,2.29,Windows,73700
+HP,Gaming,2025,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,2.29,Windows,67439
+HP,Gaming,2025,AMD,AMD Ryzen 9 8945HS,8,Dedicated,8,RTX 4060,15,1920x1080,144,16,1024,SSD,2.29,Windows,110000
+HP,Gaming,2023,AMD,AMD Ryzen 7 7840HS,8,Dedicated,6,RTX 3050,16,1920x1080,144,16,512,SSD,2.29,Windows,81990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.3,Windows,71990
+HP,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5060,15,1920x1080,144,24,1024,SSD,2.29,Windows,130990
+HP,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,8,RTX 4060,15,1920x1080,144,16,1024,SSD,2.29,Windows,119990
+HP,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5050,15,1920x1080,144,24,1024,SSD,2.29,Windows,114990
+HP,Gaming,2025,AMD,AMD Ryzen 5 8645HS,6,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.29,Windows,74800
+HP,Gaming,2024,Intel,Intel Core i5 12450H,8,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,2.37,Windows,54990
+HP,Gaming,2024,Intel,Intel Core i5 12450H,8,Dedicated,4,RTX 2050,15,1920x1080,144,8,512,SSD,2.37,Windows,50990
+HP,Gaming,2024,Intel,Intel Core i5 14450HX,10,Dedicated,6,RTX 3050,16,1920x1080,144,16,512,SSD,2.31,Windows,81990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,15,1920x1080,144,16,1024,SSD,2.37,Windows,79500
+HP,Gaming,2024,Intel,Intel Core 5 210H,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,91990
+HP,Gaming,2024,Intel,Intel Core i7 12650H,10,Dedicated,4,RTX 3050A,15,1920x1080,144,16,512,SSD,2.29,Windows,73990
+HP,Gaming,2025,AMD,AMD Ryzen 7 7445HS,6,Dedicated,6,RTX 3050,15,1920x1080,144,16,512,SSD,2.29,Windows,84999
+HP,Gaming,2024,AMD,AMD Ryzen 7 8845HS,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,93900
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 2050,15,1920x1080,144,16,512,SSD,2.3,Windows,89990
+HP,Gaming,2024,Intel,Intel Core 5 210H,8,Dedicated,6,RTX 3050,15,1920x1080,144,24,512,SSD,2.29,Windows,108990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,80800
+HP,Gaming,2023,Intel,Intel Core i7 12650H,10,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.27,Windows,97990
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,6,RTX 4050,15,1920x1080,144,16,512,SSD,2.29,Windows,87660
+HP,Gaming,2023,Intel,Intel Core i5 12450H,8,Dedicated,4,RTX 3050,15,1920x1080,144,16,512,SSD,2.29,Windows,71999
+HP,Gaming,2024,Intel,Intel Core i5 13420H,8,Dedicated,4,RTX 3050A,15,1920x1080,144,16,1024,SSD,3.35,Windows,76990
+HP,Notebook,2025,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.41,Windows,70990
+HP,Notebook,2023,Intel,Intel Core i5 1340P,12,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.75,Windows,76990
+HP,Notebook,2024,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.75,Windows,52600
+HP,2-in-1 Convertible,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,1024,SSD,1.41,Windows,84100
+HP,Notebook,2023,Intel,Intel Core i5 1235U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.4,Windows,68300
+HP,Notebook,2023,AMD,AMD Ryzen 7 5700U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,1024,SSD,1.75,Windows,64690
+HP,Notebook,2023,Intel,Intel Core i7 1255U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,1024,SSD,1.41,Windows,95990
+HP,2-in-1 Convertible,2023,Intel,Intel Core i5 1235U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.41,Windows,73000
+HP,2-in-1 Convertible,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,1024,SSD,1.51,Windows,87990
+HP,Notebook,2024,AMD,AMD Ryzen 5 5625U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.75,Windows,58870
+HP,Notebook,2023,Intel,Intel Core i5 1235U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,8,512,SSD,1.41,Windows,59650
+HP,Notebook,2023,AMD,AMD Ryzen 5 5625U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,8,512,SSD,1.75,Windows,65890
+HP,Notebook,2025,Intel,Intel Core Ultra 5 125U,12,Integrated,Shared,Intel Arc,15,1920x1080,60,16,1024,SSD,1.77,Windows,80990
+HP,Notebook,2025,Intel,Intel Core Ultra 5 125U,12,Integrated,Shared,Intel Arc,15,1920x1080,60,16,512,SSD,1.77,Windows,73100
+HP,Notebook,2024,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,1.75,Windows,77999
+HP,Notebook,2024,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,2.52,Windows,89990
+HP,Notebook,2023,Intel,Intel Core i5 1340P,12,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.74,Windows,64990
+HP,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,1024,SSD,1.75,Windows,86100
+HP,Notebook,2024,Intel,Intel Core i7 1335U,10,Integrated,Shared,Intel Iris Xe,14,2880x1800,120,16,1024,SSD,1.44,Windows,94990
+HP,Notebook,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,1024,SSD,1.74,Windows,74599
+HP,Notebook,2023,Intel,Intel Core i3 1215U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.75,Windows,53395
+HP,2-in-1 Convertible,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.51,Windows,89990
+HP,Notebook,2024,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.51,Windows,97990
+HP,Notebook,2024,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.44,Windows,75600
+HP,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.44,Windows,79990
+HP,Ultrabook,2024,Intel,Intel Core Ultra 5 125U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,16,512,SSD,1.44,Windows,93990
+HP,Ultrabook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,2.14,Windows,82300
+HP,2-in-1 Convertible,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,2.14,Windows,94990
+HP,2-in-1 Convertible,2023,AMD,AMD Ryzen 5 7530U,6,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,2.14,Windows,84990
+HP,2-in-1 Convertible,2023,AMD,AMD Ryzen 7 7730U,8,Integrated,Shared,AMD Radeon,15,1920x1080,60,16,512,SSD,2.14,Windows,85990
+HP,2-in-1 Convertible,2023,Intel,Intel Core i5 1235U,10,Dedicated,4,RTX 2050,15,1920x1080,60,16,512,SSD,1.7,Windows,71000
+HP,2-in-1 Convertible,2023,Intel,Intel Core i7 1355U,10,Dedicated,4,RTX 3050,15,1920x1080,60,16,1024,SSD,2.14,Windows,130900
+HP,2-in-1 Convertible,2024,AMD,AMD Ryzen 7 8840HS,8,Integrated,Shared,AMD Radeon 780M,14,1920x1200,60,16,512,SSD,1.44,Windows,105100
+HP,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,2800x1800,120,32,1024,SSD,1.34,Windows,154999
+HP,Ultrabook,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,13,3000x2000,60,32,1024,SSD,1.34,Windows,136990
+HP,2-in-1 Convertible,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,16,2560x1600,120,32,1024,SSD,2.01,Windows,194990
+HP,2-in-1 Convertible,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,13,3000x2000,60,16,1024,SSD,1.34,Windows,132990
+HP,2-in-1 Convertible,2023,Intel,Intel Core i7 1360P,12,Integrated,Shared,Intel Arc,16,3840x2400,60,32,1024,SSD,2.01,Windows,184990
+HP,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.79,Windows,62990
+HP,Notebook,2025,AMD,AMD Ryzen AI 5 340,6,Integrated,Shared,AMD Radeon 840M,15,1920x1200,60,16,512,SSD,1.7,Windows,60990
+HP,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.79,Windows,64990
+HP,Notebook,2025,Qualcomm,Snapdragon X X1-26-100,8,Integrated,Shared,Qualcomm Adreno,16,1920x1200,60,16,1024,SSD,1.59,Windows,78700
+HP,Ultrabook,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,512,SSD,1.38,Windows,106990
+HP,Ultrabook,2025,Qualcomm,Snapdragon X Elite X1E-78-100,12,Integrated,Shared,Qualcomm Adreno,14,2240x1400,60,16,1024,SSD,1.34,Windows,128990
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.38,Windows,143990
+HP,Ultrabook,2024,Qualcomm,Snapdragon X Plus X1P-42-100,8,Integrated,Shared,Qualcomm Adreno,14,2240x1400,60,16,512,SSD,1.34,Windows,96999
+HP,Ultrabook,2025,Intel,Intel Core Ultra 5 255H,14,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.5,Windows,97990
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.38,Windows,124990
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 5 226V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.38,Windows,102990
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 258V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.38,Windows,189990
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,16,1024,SSD,1.38,Windows,171890
+HP,2-in-1 Convertible,2025,Intel,Intel Core Ultra 9 288V,8,Integrated,Shared,Intel Arc,14,2880x1800,120,32,1024,SSD,1.34,Windows,234990
+HP,Ultrabook,2025,AMD,AMD Ryzen AI 9 375HX,12,Integrated,Shared,AMD Radeon 890M,14,2240x1400,60,32,1024,SSD,1.57,Windows,139990
+HP,Business,2024,AMD,AMD Ryzen 5 8540U,6,Integrated,Shared,AMD Radeon 740M,14,1920x1200,60,16,512,SSD,1.7,Windows,61100
+HP,Business,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1200,60,16,1024,SSD,1.2,Windows,124500
+HP,Business,2024,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,14,1920x1200,60,32,1024,SSD,1.2,Windows,137900
+HP,Business,2023,AMD,AMD Ryzen 5 Pro 6650U,6,Integrated,Shared,AMD Radeon 660M,14,1920x1200,60,16,512,SSD,1.4,Windows,62990
+HP,Business,2023,AMD,AMD Ryzen 7 Pro 6850U,8,Integrated,Shared,AMD Radeon 680M,14,1920x1200,60,16,512,SSD,1.4,Windows,68300
+HP,Business,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel UHD,14,1920x1080,60,16,512,SSD,1.37,Windows,99990
+HP,Business,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel UHD,14,1920x1080,60,16,1024,SSD,1.37,Windows,85530
+HP,Business,2024,Intel,Intel Core Ultra 7 155U,12,Integrated,Shared,Intel Arc,16,1920x1200,60,16,1204,SSD,1.7,Windows,159990
+HP,Notebook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1080,60,16,1024,SSD,1.4,Windows,75990
+HP,Notebook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,1920x1080,60,24,1024,SSD,1.4,Windows,86990
+HP,Notebook,2025,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1366x768,60,16,512,SSD,1.4,Windows,48990
+HP,Notebook,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.65,Windows,52700
+HP,Notebook,2026,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.59,Windows,54990
+HP,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.38,Windows,65889
+Dell,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,6,RTX 4050,16,2560x1600,120,16,1024,SSD,2.57,Windows,123490
+Dell,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,6,RTX 3050,16,2560x1600,120,16,1024,SSD,2.57,Windows,107230
+Dell,Gaming,2023,Intel,Intel Core i7 13620H,10,Dedicated,6,RTX 4050,14,2560x1600,165,16,1024,SSD,2.08,Windows,151990
+Dell,Gaming,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,6,RTX 4050,16,2560x1600,240,16,1024,SSD,2.61,Windows,147490
+Dell,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4060,16,2560x1600,240,16,1024,SSD,2.61,Windows,158990
+Dell,Gaming,2024,Intel,Intel Core i9 14900HX,24,Dedicated,12,RTX 4080,18,2560x1600,165,32,1024,SSD,4.23,Windows,330990
+Dell,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,8,RTX 4070,16,2560x1600,240,32,1024,SSD,2.61,Windows,189990
+Dell,Gaming,2024,Intel,Intel Core Ultra 9 185H,16,Dedicated,16,RTX 4090,16,2560x1600,240,32,1024,SSD,2.61,Windows,435990
+Dell,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,8,RTX 5070,16,2560x1600,240,32,1024,SSD,2.66,Windows,254000
+Dell,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,16,RTX 5080,18,2560x1600,300,32,2048,SSD,4.3,Windows,423990
+Dell,Gaming,2025,Intel,Intel Core Ultra 9 275HX,24,Dedicated,12,RTX 5070 Ti,16,2560x1600,240,32,1024,SSD,3.4,Windows,349990
+Dell,Gaming,2025,Intel,Intel Core 7 240H,10,Dedicated,8,RTX 5060,16,2560x1600,120,16,1024,SSD,2.57,Windows,174999
+Dell,Gaming,2023,Intel,Intel Core i7 13650HX,14,Dedicated,6,RTX 4050,15,1920x1080,165,16,1024,SSD,2.65,Windows,122990
+Dell,Gaming,2023,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,120,16,512,SSD,2.65,Windows,81299
+Dell,Gaming,2023,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,120,8,512,SSD,2.65,Windows,75100
+Dell,Gaming,2023,Intel,Intel Core i7 13650HX,16,Dedicated,6,RTX 3050,15,1920x1080,120,16,1024,SSD,2.65,Windows,119990
+Dell,Gaming,2023,Intel,Intel Core i7 13650HX,16,Dedicated,6,RTX 4050,15,1920x1080,120,16,512,SSD,2.81,Windows,107870
+Dell,Gaming,2023,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,120,8,512,SSD,2.65,Windows,84990
+Dell,Business,2024,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.66,Windows,48990
+Dell,Business,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel UHD,15,1920x1080,60,8,512,SSD,1.66,Windows,59999
+Dell,Business,2026,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,15,1920x1080,120,8,512,SSD,1.5,Windows,46990
+Dell,Business,2026,AMD,AMD Ryzen 5 7520U,4,Integrated,Shared,AMD Radeon 610M,15,1920x1080,120,8,512,SSD,1.5,Windows,47490
+Dell,Business,2026,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,15,1920x1080,120,16,512,SSD,1.5,Windows,59990
+Dell,Business,2025,AMD,AMD Ryzen 5 7520U,4,Integrated,Shared,AMD Radeon 610M,15,1920x1080,120,8,512,SSD,1.5,Windows,46990
+Dell,Business,2025,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.5,Windows,78500
+Dell,Business,2024,Intel,Intel Core i5 1215U,6,Integrated,Shared,Intel UHD,15,1920x1080,60,16,512,SSD,1.6,Windows,48990
+Dell,Business,2024,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,14,1920x1080,60,8,512,SSD,1.25,Windows,49099
+Dell,Business,2026,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1366x768,60,8,512,SSD,1.6,Windows,46990
+Dell,Business,2025,Intel,Intel Core i3 1315U,6,Integrated,Shared,Intel UHD,15,1366x768,60,8,512,SSD,1.6,Windows,51990
+Dell,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Dedicated,8,RTX 4060,16,3840x2400,120,32,1024,SSD,2.13,Windows,313990
+Dell,Ultrabook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,3200x2000,120,16,1024,SSD,1.68,Windows,183990
+Dell,Ultrabook,2024,Qualcomm,Snapdragon X Elite X1E-80-100,12,Integrated,Shared,Qualcomm Adreno,13,2800x1800,60,32,1024,SSD,1.17,Windows,179990
+Dell,Ultrabook,2025,Intel,Intel Core Ultra 7 256V,8,Integrated,Shared,Intel Arc,13,1920x1200,120,16,512,SSD,1.22,Windows,163990
+Dell,Ultrabook,2024,Qualcomm,Snapdragon X Elite X1E-80-100,12,Integrated,Shared,Qualcomm Adreno,13,2800x1800,60,16,512,SSD,1.17,Windows,159990
+Dell,Notebook,2023,Intel,Intel Core i7 1335U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,16,512,SSD,1.62,Windows,69990
+Dell,Notebook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,16,1920x1200,60,16,512,SSD,1.9,Windows,79990
+Dell,Notebook,2024,Intel,Intel Core Ultra 5 125H,14,Integrated,Shared,Intel Arc,13,2560x1600,60,16,512,SSD,1.24,Windows,94980
+Dell,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,8,512,SSD,1.69,Windows,59990
+Dell,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,512,SSD,1.54,Windows,75999
+Dell,Notebook,2025,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,15,1920x1080,120,8,512,SSD,1.5,Windows,47620
+Dell,Notebook,2024,AMD,AMD Ryzen 5 8540U,6,Integrated,Shared,AMD Radeon,14,1920x1200,60,16,512,SSD,1.61,Windows,57990
+Dell,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,120,16,1024,SSD,1.69,Windows,77999
+Dell,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,120,16,512,SSD,1.69,Windows,70999
+Dell,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,1024,SSD,1.54,Windows,85499
+Dell,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,8,512,SSD,1.54,Windows,64999
+Dell,Notebook,2023,Intel,Intel Core i7 13620H,10,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.6,Windows,84990
+Dell,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,60,8,512,SSD,1.6,Windows,55000
+Dell,Notebook,2024,Intel,Intel Core 7 150U,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,152,SSD,1.87,Windows,90545
+Dell,Notebook,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,16,1920x1200,60,16,512,SSD,1.85,Windows,75990
+Dell,Notebook,2024,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.54,Windows,69990
+Dell,2-in-1 Convertible,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,8,512,SSD,1.58,Windows,89890
+Dell,Notebook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,14,2880x1800,60,16,1024,SSD,1.24,Windows,89999
+Dell,Notebook,2024,Intel,Intel Core Ultra 7 155H,16,Integrated,Shared,Intel Arc,13,2560x1600,60,16,1024,SSD,1.24,Windows,99999
+Dell,Notebook,2023,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,120,8,512,SSD,2.65,Windows,75100
+Dell,Notebook,2023,Intel,Intel Core i5 13450HX,10,Dedicated,6,RTX 3050,15,1920x1080,120,15,512,SSD,2.65,Windows,81230
+Dell,2-in-1 Convertible,2023,Intel,Intel Core i7 1355U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,16,512,SSD,1.58,Windows,107990
+Dell,Notebook,2026,Intel,Intel Core 3 100U,6,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.5,Windows,45980
+Dell,Notebook,2025,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.5,Windows,56000
+Dell,Notebook,2023,Intel,Intel Core i5 1334U,10,Integrated,Shared,Intel Iris Xe,15,1920x1080,120,16,1024,SSD,1.62,Windows,79990
+Dell,Notebook,2025,Intel,Intel Core i3 1305U,5,Integrated,Shared,Intel UHD,14,1920x1200,60,8,512,SSD,1.5,Windows,45990
+Dell,Notebook,2024,Intel,Intel Core 5 210H,8,Integrated,Shared,Intel UHD,14,1920x1200,60,16,512,SSD,1.6,Windows,68990
+Dell,Notebook,2024,Qualcomm,Snapdragon X Plus X1P-64-100,10,Integrated,Shared,Qualcomm Adreno,14,2560x1600,60,16,512,SSD,1.4,Windows,98990
+Dell,2-in-1 Convertible,2023,Intel,Intel Core i5 1335U,10,Integrated,Shared,Intel Iris Xe,14,1920x1080,60,8,512,SSD,1.65,Windows,72990
+Dell,Notebook,2024,Qualcomm,Snapdragon X Plus X1P-64-100,10,Integrated,Shared,Qualcomm Adreno,14,2560x1600,60,16,1024,SSD,1.4,Windows,109990
+Dell,2-in-1 Convertible,2024,Intel,Intel Core 7 150U,10,Integrated,Shared,Intel Iris Xe,14,1920x1200,60,16,1024,SSD,1.71,Windows,107990
