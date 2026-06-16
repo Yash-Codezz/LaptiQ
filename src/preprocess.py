@@ -42,9 +42,10 @@ def preprocess(data):
 
     data.drop(columns=['GPU_Model'], inplace=True)
 
-
-    data.loc[data['GPU_VRAM'] == 'Shared', 'GPU_VRAM'] = 0
-    data['GPU_VRAM'] = data['GPU_VRAM'].astype('int')
+    data['GPU_VRAM'] = data['GPU_VRAM'].str.replace('GB', '').str.strip()
+    data['GPU_VRAM'] = data['GPU_VRAM'].replace('Shared', '0')
+    data['GPU_VRAM'] = data['GPU_VRAM'].astype(int)
+    
 
 
     data[['ScreenW', 'ScreenH']] = data['Resolution'].str.split('x', expand=True).astype(int)
