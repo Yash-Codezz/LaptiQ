@@ -432,17 +432,116 @@ button.btn-del:hover {
     font-style: italic;
 }
 
-/* dark input widgets */
+/* input widgets */
 .stSelectbox > div > div,
 .stTextInput > div > div > input,
 .stNumberInput > div > div > input {
     background: rgba(255,255,255,0.035) !important;
     border: 1px solid rgba(255,255,255,0.08) !important;
     border-radius: 8px !important;
-    color: #ddd !important;
+    color: #e0e0f0 !important;
 }
 
 .stSlider > div > div > div { color: #23d5ab !important; }
+
+/* widget labels */
+.stSelectbox label,
+.stTextInput label,
+.stNumberInput label,
+.stSlider label,
+.stRadio label,
+.stCheckbox label,
+.stMultiSelect label,
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] label {
+    color: #c8c8dc !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+/* selectbox value + dropdown */
+.stSelectbox [data-testid="stMarkdownContainer"],
+.stSelectbox [data-baseweb="select"] span,
+.stSelectbox [data-baseweb="select"] .css-1dimb5e-singleValue,
+.stSelectbox [data-baseweb="select"] > div > div > div,
+.stSelectbox div[data-baseweb="select"] > div {
+    color: #e0e0f0 !important;
+}
+
+[data-baseweb="popover"],
+[data-baseweb="popover"] ul,
+[data-baseweb="menu"],
+[role="listbox"] {
+    background: #1a1a2e !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* dropdown options */
+[data-baseweb="popover"] li,
+[data-baseweb="menu"] li,
+[role="option"],
+[data-baseweb="popover"] ul li,
+ul[role="listbox"] li {
+    color: #d0d0e4 !important;
+    background: transparent !important;
+}
+
+[data-baseweb="popover"] li:hover,
+[data-baseweb="menu"] li:hover,
+[role="option"]:hover,
+li[aria-selected="true"],
+[data-baseweb="popover"] li[aria-selected="true"] {
+    background: rgba(35,213,171,0.12) !important;
+    color: #ffffff !important;
+}
+
+[data-baseweb="menu"] li[data-highlighted="true"],
+[role="option"][data-highlighted] {
+    background: rgba(35,213,171,0.15) !important;
+    color: #ffffff !important;
+}
+
+/* input text + placeholders */
+.stTextInput input,
+.stNumberInput input {
+    color: #e0e0f0 !important;
+}
+
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder {
+    color: #6a6a82 !important;
+    opacity: 1 !important;
+}
+
+.stSelectbox svg,
+.stSelectbox [data-baseweb="select"] svg {
+    fill: #8a8aa0 !important;
+    color: #8a8aa0 !important;
+}
+
+/* tooltip icons */
+.stSelectbox [data-testid="stTooltipIcon"],
+.stTextInput [data-testid="stTooltipIcon"],
+.stNumberInput [data-testid="stTooltipIcon"] {
+    color: #6a6a82 !important;
+}
+
+/* lock dark background across all containers */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stHeader"],
+header[data-testid="stHeader"] {
+    background: #0f0f1a !important;
+}
+
+[data-testid="stToolbar"],
+[data-testid="stStatusWidget"] {
+    color: #7c7c90 !important;
+}
+
+.streamlit-expanderHeader { color: #c8c8dc !important; }
+.streamlit-expanderContent { color: #a0a0b8 !important; }
 
 #MainMenu { visibility: hidden; }
 footer    { visibility: hidden; }
