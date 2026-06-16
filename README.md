@@ -3,7 +3,7 @@
 
 LaptiQ is an end-to-end machine learning web app that predicts the current Indian market price of any laptop based on its specifications. Enter your CPU, GPU, RAM, display, and other details — LaptiQ returns an estimated price in seconds.
 
-**🚀 Live Demo →** 
+**🚀 Live Demo →** https://laptiq.streamlit.app/
 
 ---
 
