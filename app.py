@@ -812,9 +812,12 @@ if st.session_state["page"] == "home":
                 processed  = preprocess(input_df)
                 prediction = model.predict(processed)
                 price      = int(round(prediction[0]))
+
                 margin     = price * 0.12
-                lower_price = int(round(price - margin))
-                upper_price = int(round(price + margin))
+
+                lower_price = int(round((price - margin) / 500) * 500)
+                upper_price = int(round((price + margin) / 500) * 500)
+                
                 formatted       = indian_format(price)
                 formatted_lower = indian_format(lower_price)
                 formatted_upper = indian_format(upper_price)
