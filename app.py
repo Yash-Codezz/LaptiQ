@@ -239,6 +239,14 @@ section[data-testid="stSidebar"] div.stButton > button.nav-active {
     -webkit-text-fill-color: transparent;
 }
 
+.result-subprice {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6a6a82;
+    margin-top: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
 /* loading spinner */
 .spin-dot {
     width: 40px;
@@ -574,7 +582,8 @@ footer    { visibility: hidden; }
 
     div.stButton > button  { padding: 0.85rem 1.5rem; font-size: 1rem; border-radius: 10px; }
     .result-box            { padding: 1.3rem 1rem; margin: 1rem auto; border-radius: 12px; }
-    .result-price          { font-size: 2rem; }
+    .result-price          { font-size: 1.7rem; }
+    .result-subprice       { font-size: 0.82rem; }
     .result-label          { font-size: 0.75rem; letter-spacing: 1.2px; }
     .footer-note           { font-size: 0.7rem; margin-top: 1.5rem; }
     .h-price               { font-size: 1.2rem; }
@@ -585,7 +594,8 @@ footer    { visibility: hidden; }
     .laptiq-title  { font-size: 1.8rem; }
     .laptiq-sub    { font-size: 0.82rem; margin-bottom: 1.2rem; }
     .card          { padding: 0.85rem 0.85rem 0.4rem; }
-    .result-price  { font-size: 1.7rem; }
+    .result-price  { font-size: 1.35rem; }
+    .result-subprice { font-size: 0.75rem; }
     .h-price       { font-size: 1.1rem; }
 
     div.stButton > button { font-size: 0.92rem; padding: 0.75rem 1rem; }
@@ -595,7 +605,8 @@ footer    { visibility: hidden; }
 @media (min-width: 769px) and (max-width: 1024px) {
     .laptiq-title { font-size: 2.8rem; }
     .block-container { padding-left: 1rem !important; padding-right: 1rem !important; }
-    .result-price { font-size: 2.3rem; }
+    .result-price { font-size: 2rem; }
+    .result-subprice { font-size: 0.88rem; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -801,7 +812,12 @@ if st.session_state["page"] == "home":
                 processed  = preprocess(input_df)
                 prediction = model.predict(processed)
                 price      = int(round(prediction[0]))
-                formatted  = indian_format(price)
+                margin     = price * 0.12
+                lower_price = int(round(price - margin))
+                upper_price = int(round(price + margin))
+                formatted       = indian_format(price)
+                formatted_lower = indian_format(lower_price)
+                formatted_upper = indian_format(upper_price)
 
                 # save to history — max 20 entries, oldest dropped first
                 entry = {
@@ -825,8 +841,9 @@ if st.session_state["page"] == "home":
                 st.markdown(f"""
                 <div class="result-wrap">
                     <div class="result-box">
-                        <div class="result-label">Estimated Market Price</div>
-                        <div class="result-price">₹{formatted}</div>
+                        <div class="result-label">Estimated Price Range</div>
+                        <div class="result-price">₹{formatted_lower} – ₹{formatted_upper}</div>
+                        <div class="result-subprice">(Most likely around ₹{formatted})</div>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
