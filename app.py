@@ -40,6 +40,8 @@ if "page" not in st.session_state:
     st.session_state["page"] = "home"
 if "history" not in st.session_state:
     st.session_state["history"] = []
+if "compare_active_tab" not in st.session_state:
+    st.session_state["compare_active_tab"] = 0
 
 
 # Indian number format: 124990 -> "1,24,990"
@@ -554,6 +556,86 @@ header[data-testid="stHeader"] {
 #MainMenu { visibility: hidden; }
 footer    { visibility: hidden; }
 
+/* compare page */
+.compare-col-header {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #e0e0f0;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 2px solid rgba(35,213,171,0.15);
+    letter-spacing: 0.3px;
+}
+
+div.stButton.cmp-tab-btn > button {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    color: #8a8aa0 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 8px !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+    letter-spacing: 0 !important;
+}
+
+div.stButton.cmp-tab-btn > button:hover {
+    background: rgba(255,255,255,0.055) !important;
+    color: #c0c0d0 !important;
+    transform: none !important;
+}
+
+div.stButton.cmp-tab-btn > button.cmp-tab-active {
+    background: rgba(35,213,171,0.1) !important;
+    border-color: rgba(35,213,171,0.35) !important;
+    color: #23d5ab !important;
+    font-weight: 700 !important;
+}
+
+.compare-result-box {
+    background: linear-gradient(135deg, rgba(35,213,171,0.1), rgba(164,99,242,0.08));
+    border: 1px solid rgba(35,213,171,0.2);
+    border-radius: 16px;
+    padding: 1.4rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compare-result-box.best-value {
+    border-color: rgba(35,213,171,0.5);
+    box-shadow: 0 0 20px rgba(35,213,171,0.15), 0 0 40px rgba(35,213,171,0.05);
+}
+
+.compare-result-header {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c0c0d0;
+    margin-bottom: 0.15rem;
+}
+
+.compare-result-sub {
+    font-size: 0.72rem;
+    color: #7c7c90;
+    margin-bottom: 0.6rem;
+}
+
+.best-value-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f0f1a;
+    background: linear-gradient(135deg, #23d5ab, #1cc49e);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-top: 0.7rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 12px rgba(35,213,171,0.35);
+}
+
 
 /* tablets */
 @media (max-width: 768px) {
@@ -587,6 +669,21 @@ footer    { visibility: hidden; }
     .result-label          { font-size: 0.75rem; letter-spacing: 1.2px; }
     .footer-note           { font-size: 0.7rem; margin-top: 1.5rem; }
     .h-price               { font-size: 1.2rem; }
+
+    /* compare mobile */
+    .compare-col-header { font-size: 0.92rem; padding: 0.4rem 0; }
+    .compare-result-box { padding: 1.1rem 0.8rem; border-radius: 12px; }
+
+    /* keep compare tab pills in a row on mobile */
+    [data-testid="stHorizontalBlock"]:has(.cmp-tab-marker) {
+        flex-direction: row !important;
+        gap: 0.4rem !important;
+    }
+    [data-testid="stHorizontalBlock"]:has(.cmp-tab-marker) > [data-testid="stColumn"] {
+        min-width: 0 !important;
+        flex: 1 1 0% !important;
+        width: auto !important;
+    }
 }
 
 /* small phones */
@@ -599,6 +696,7 @@ footer    { visibility: hidden; }
     .h-price       { font-size: 1.1rem; }
 
     div.stButton > button { font-size: 0.92rem; padding: 0.75rem 1rem; }
+    div.stButton.cmp-tab-btn > button { font-size: 0.75rem !important; padding: 0.4rem 0.5rem !important; }
 }
 
 /* iPads */
@@ -607,6 +705,7 @@ footer    { visibility: hidden; }
     .block-container { padding-left: 1rem !important; padding-right: 1rem !important; }
     .result-price { font-size: 2rem; }
     .result-subprice { font-size: 0.88rem; }
+    .compare-col-header { font-size: 0.95rem; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -632,8 +731,48 @@ setTimeout(styleLaptiQButtons, 200);
 setTimeout(styleLaptiQButtons, 600);
 setTimeout(styleLaptiQButtons, 1200);
 setTimeout(styleLaptiQButtons, 2500);
+function handleCompareLayout() {
+    const activeEl = document.getElementById('cmp-active-tab');
+    if (!activeEl) return;
+    const activeTab = parseInt(activeEl.dataset.tab);
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    const tabMarkers = document.querySelectorAll('.cmp-tab-marker');
+    if (tabMarkers.length > 0) {
+        const tabRow = tabMarkers[0].closest('[data-testid="stHorizontalBlock"]');
+        if (tabRow) tabRow.style.display = isMobile ? '' : 'none';
+    }
+    tabMarkers.forEach(marker => {
+        const idx = parseInt(marker.dataset.idx);
+        const col = marker.closest('[data-testid="stColumn"]');
+        if (!col) return;
+        const btnDiv = col.querySelector('div.stButton');
+        if (btnDiv) {
+            btnDiv.classList.add('cmp-tab-btn');
+            const btn = btnDiv.querySelector('button');
+            if (btn) {
+                if (idx === activeTab) btn.classList.add('cmp-tab-active');
+                else btn.classList.remove('cmp-tab-active');
+            }
+        }
+    });
+
+    document.querySelectorAll('.cmp-col-marker').forEach(marker => {
+        const laptopIdx = parseInt(marker.dataset.laptop);
+        const col = marker.closest('[data-testid="stColumn"]');
+        if (!col) return;
+        col.style.display = (isMobile && laptopIdx !== activeTab) ? 'none' : '';
+    });
+}
+
+handleCompareLayout();
+setTimeout(handleCompareLayout, 300);
+setTimeout(handleCompareLayout, 800);
+window.addEventListener('resize', handleCompareLayout);
+
 const _lqObs = new MutationObserver(() => {
     requestAnimationFrame(styleLaptiQButtons);
+    requestAnimationFrame(handleCompareLayout);
 });
 _lqObs.observe(document.body, {childList: true, subtree: true});
 </script>
@@ -650,6 +789,7 @@ with st.sidebar:
         ("home",       "🏠  Home"),
         ("history",    "🕒  History"),
         ("model_info", "📊  Model Info"),
+        ("compare",    "⚖️  Compare"),
     ]
 
     for key, label in nav_items:
@@ -668,6 +808,181 @@ with st.sidebar:
     st.markdown(
         '<p style="color:#4a4a5e;font-size:0.7rem;text-align:center;">LaptiQ v1.0 · XGBoost</p>',
         unsafe_allow_html=True,
+    )
+
+
+def render_laptop_form(i):
+
+    st.markdown(
+        '<div class="card c-basic"><div class="card-head c-basic">🏷️ Basic Info</div>',
+        unsafe_allow_html=True,
+    )
+    brand = st.selectbox("Brand", [
+        "Lenovo", "Asus", "HP", "MSI", "Apple", "Acer", "Dell", "Samsung", "Other"
+    ], key=f"brand_{i}")
+    laptop_type = st.selectbox("Laptop Type", [
+        "Gaming", "Notebook", "Business", "Ultrabook",
+        "2-in-1 Convertible", "Workstation", "Creator"
+    ], key=f"laptop_type_{i}")
+    os_val = st.selectbox(
+        "Operating System", ["Windows", "macOS", "ChromeOS", "Other"], key=f"os_{i}"
+    )
+    launch_year = st.selectbox(
+        "Launch Year", [2026, 2025, 2024, 2023], key=f"launch_year_{i}"
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="card c-cpu"><div class="card-head c-cpu">⚡ Processor</div>',
+        unsafe_allow_html=True,
+    )
+    cpu_brand = st.selectbox(
+        "CPU Brand", ["Intel", "AMD", "Apple", "Qualcomm"], key=f"cpu_brand_{i}"
+    )
+    cpu_model = st.text_input(
+        "CPU Model",
+        placeholder="e.g. Intel Core i7-13700H",
+        help="Full model name — e.g. AMD Ryzen 5 7530U, Apple M3 Pro, Snapdragon X Elite",
+        key=f"cpu_model_{i}",
+    )
+    cpu_cores = st.number_input(
+        "CPU Cores", min_value=2, max_value=24, value=8, step=1, key=f"cpu_cores_{i}"
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="card c-mem"><div class="card-head c-mem">💾 Memory & Storage</div>',
+        unsafe_allow_html=True,
+    )
+    ram = st.selectbox(
+        "RAM", [8, 16, 24, 32, 48, 64, 96, 128],
+        format_func=lambda x: f"{x} GB", key=f"ram_{i}",
+    )
+    storage_label = st.selectbox(
+        "Storage", list(STORAGE_MAP.keys()), key=f"storage_{i}"
+    )
+    storage_type = st.selectbox(
+        "Storage Type", ["SSD", "HDD"], key=f"storage_type_{i}"
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="card c-display"><div class="card-head c-display">🖥️ Display</div>',
+        unsafe_allow_html=True,
+    )
+    screen_size = st.selectbox(
+        "Screen Size",
+        [11.6, 13.3, 13.6, 14.0, 15.6, 16.0, 17.3],
+        format_func=lambda x: f'{x}"',
+        key=f"screen_size_{i}",
+    )
+    resolution = st.selectbox("Resolution", [
+        "1920x1080", "1920x1200", "2560x1600", "2560x1664",
+        "2880x1800", "2880x1864", "3024x1964", "3456x2160",
+        "3456x2234", "3840x2160"
+    ], key=f"resolution_{i}")
+    refresh_rate = st.selectbox(
+        "Refresh Rate",
+        [60, 90, 120, 144, 165, 240, 360],
+        format_func=lambda x: f"{x} Hz",
+        key=f"refresh_rate_{i}",
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="card c-gpu"><div class="card-head c-gpu">🎮 Graphics</div>',
+        unsafe_allow_html=True,
+    )
+    gpu_type = st.selectbox(
+        "GPU Type", ["Dedicated", "Integrated"], key=f"gpu_type_{i}"
+    )
+    gpu_model = st.text_input(
+        "GPU Model",
+        placeholder="e.g. NVIDIA RTX 4060",
+        help="e.g. NVIDIA RTX 4060, Intel Iris Xe, AMD Radeon 780M, Apple M3 GPU",
+        key=f"gpu_model_{i}",
+    )
+    gpu_vram_label = st.selectbox(
+        "GPU VRAM",
+        ["Shared", "4GB", "6GB", "8GB", "12GB", "16GB", "24GB"],
+        help="Pick 'Shared' for integrated graphics with no dedicated VRAM",
+        key=f"gpu_vram_{i}",
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown(
+        '<div class="card c-build"><div class="card-head c-build">⚖️ Build</div>',
+        unsafe_allow_html=True,
+    )
+    weight = st.number_input(
+        "Weight (kg)", min_value=0.8, max_value=4.5, value=1.8,
+        step=0.1, format="%.1f", key=f"weight_{i}",
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    return {
+        "brand": brand,
+        "laptop_type": laptop_type,
+        "os": os_val,
+        "launch_year": launch_year,
+        "cpu_brand": cpu_brand,
+        "cpu_model": cpu_model,
+        "cpu_cores": cpu_cores,
+        "ram": ram,
+        "storage_label": storage_label,
+        "storage_type": storage_type,
+        "screen_size": screen_size,
+        "resolution": resolution,
+        "refresh_rate": refresh_rate,
+        "gpu_type": gpu_type,
+        "gpu_model": gpu_model,
+        "gpu_vram_label": gpu_vram_label,
+        "weight": weight,
+    }
+
+
+def predict_laptop(form_data):
+
+    gpu_vram_raw = (
+        "Shared"
+        if form_data["gpu_vram_label"] == "Shared"
+        else form_data["gpu_vram_label"].replace("GB", "").strip()
+    )
+
+    input_data = {
+        "Brand":        form_data["brand"],
+        "Laptop_Type":  form_data["laptop_type"],
+        "Launch_Year":  int(form_data["launch_year"]),
+        "CPU_Brand":    form_data["cpu_brand"],
+        "CPU_Model":    form_data["cpu_model"].strip(),
+        "CPU_Cores":    int(form_data["cpu_cores"]),
+        "GPU_Type":     form_data["gpu_type"],
+        "GPU_VRAM":     gpu_vram_raw,
+        "GPU_Model":    form_data["gpu_model"].strip(),
+        "Screen_Size":  form_data["screen_size"],
+        "Resolution":   form_data["resolution"],
+        "Refresh_Rate": form_data["refresh_rate"],
+        "RAM":          form_data["ram"],
+        "Storage":      STORAGE_MAP[form_data["storage_label"]],
+        "Storage_Type": form_data["storage_type"],
+        "Weight":       float(form_data["weight"]),
+        "OS":           form_data["os"],
+    }
+
+    input_df   = pd.DataFrame([input_data])
+    processed  = preprocess(input_df)
+    prediction = model.predict(processed)
+    price      = int(round(prediction[0]))
+
+    margin      = price * 0.12
+    lower_price = int(round((price - margin) / 500) * 500)
+    upper_price = int(round((price + margin) / 500) * 500)
+
+    return (
+        price, lower_price, upper_price,
+        indian_format(price),
+        indian_format(lower_price),
+        indian_format(upper_price),
     )
 
 
@@ -979,5 +1294,131 @@ elif st.session_state["page"] == "model_info":
     st.markdown("""
     <div class="footer-note">
         Built with XGBoost · sklearn Pipeline · Streamlit
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# =============================================================================
+#  PAGE: COMPARE
+# =============================================================================
+elif st.session_state["page"] == "compare":
+
+    st.markdown('<h1 class="laptiq-title">LaptiQ</h1>', unsafe_allow_html=True)
+    st.markdown(
+        '<p class="laptiq-sub">Compare up to 3 laptops side-by-side</p>',
+        unsafe_allow_html=True,
+    )
+
+    active_tab = st.session_state.get("compare_active_tab", 0)
+
+
+    st.markdown(
+        f'<div id="cmp-active-tab" data-tab="{active_tab}" style="display:none"></div>',
+        unsafe_allow_html=True,
+    )
+
+    tab_cols = st.columns(3)
+    for idx, tc in enumerate(tab_cols):
+        with tc:
+            st.markdown(
+                f'<div class="cmp-tab-marker" data-idx="{idx}" style="display:none"></div>',
+                unsafe_allow_html=True,
+            )
+            if st.button(
+                f"Laptop {idx + 1}", key=f"cmp_tab_{idx}", use_container_width=True
+            ):
+                st.session_state["compare_active_tab"] = idx
+                st.rerun()
+
+    # --- Three form columns -----------------------------------------------
+    cols = st.columns(3)
+    forms = []
+    for idx in range(3):
+        with cols[idx]:
+            st.markdown(
+                f'<div class="cmp-col-marker" data-laptop="{idx}" style="display:none"></div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                f'<div class="compare-col-header">Laptop {idx + 1}</div>',
+                unsafe_allow_html=True,
+            )
+            form_data = render_laptop_form(idx + 1)
+            forms.append(form_data)
+
+    # --- Compare button ---------------------------------------------------
+    st.markdown("<br>", unsafe_allow_html=True)
+    compare_clicked = st.button("⚡  Compare Prices", use_container_width=True)
+
+    if compare_clicked:
+        filled = []
+        for idx, fd in enumerate(forms):
+            if fd["cpu_model"].strip() and fd["gpu_model"].strip():
+                filled.append((idx, fd))
+
+        if not filled:
+            st.warning(
+                "Please fill in CPU Model and GPU Model for at least one laptop."
+            )
+        else:
+            placeholder = st.empty()
+            placeholder.markdown("""
+            <div style="display:flex;flex-direction:column;align-items:center;padding:1.5rem;">
+                <div class="spin-dot"></div>
+                <div style="color:#7c7c90;font-size:0.9rem;font-weight:500;">
+                    Comparing specs…
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            time.sleep(0.8)
+
+            results = []
+            error_occurred = False
+            for laptop_idx, fd in filled:
+                try:
+                    result = predict_laptop(fd)
+                    results.append((laptop_idx, fd, result))
+                except Exception as e:
+                    placeholder.empty()
+                    st.error(f"Prediction failed for Laptop {laptop_idx + 1}: {e}")
+                    error_occurred = True
+                    break
+
+            if not error_occurred and results:
+                placeholder.empty()
+
+                # Identify the laptop with the lowest predicted price
+                best_laptop_idx = min(results, key=lambda x: x[2][0])[0]
+
+                result_cols = st.columns(3)
+                for (
+                    laptop_idx, fd,
+                    (price, lower_price, upper_price,
+                     formatted, formatted_lower, formatted_upper),
+                ) in results:
+                    with result_cols[laptop_idx]:
+                        is_best = (
+                            laptop_idx == best_laptop_idx and len(results) > 1
+                        )
+                        best_class = " best-value" if is_best else ""
+                        badge_html = (
+                            '<div class="best-value-badge">💰 Best Value</div>'
+                            if is_best
+                            else ""
+                        )
+
+                        st.markdown(f"""<div class="result-wrap"><div class="compare-result-box{best_class}">
+<div class="compare-result-header">Laptop {laptop_idx + 1}</div>
+<div class="compare-result-sub">{fd['brand']} · {fd['laptop_type']}</div>
+<div class="result-label">Estimated Price Range</div>
+<div class="result-price">₹{formatted_lower} – ₹{formatted_upper}</div>
+<div class="result-subprice">(Most likely around ₹{formatted})</div>
+{badge_html}
+</div></div>""", unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="footer-note">
+        Predictions are based on training data and current market trends. Actual prices may vary.
     </div>
     """, unsafe_allow_html=True)
