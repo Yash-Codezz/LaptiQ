@@ -2,6 +2,7 @@ import numpy as np
 
 import pandas as pd
 
+from datetime import datetime
 
 def preprocess(data):
     
@@ -11,7 +12,8 @@ def preprocess(data):
     data['Brand'] = data['Brand'].apply(lambda x : x if x in brands else 'Other')
 
 
-    data['Laptop_Age'] = 2026 - data['Launch_Year'] 
+    current_year = datetime.now().year 
+    data['Laptop_Age'] = current_year - data['Launch_Year'] 
     data.drop(columns=['Launch_Year'], inplace=True)
 
 
@@ -42,11 +44,11 @@ def preprocess(data):
 
     data.drop(columns=['GPU_Model'], inplace=True)
 
+
     data['GPU_VRAM'] = data['GPU_VRAM'].str.replace('GB', '').str.strip()
     data['GPU_VRAM'] = data['GPU_VRAM'].replace('Shared', '0')
     data['GPU_VRAM'] = data['GPU_VRAM'].astype(int)
     
-
 
     data[['ScreenW', 'ScreenH']] = data['Resolution'].str.split('x', expand=True).astype(int)
     data['Pixel_Per_Inch'] = (np.sqrt(np.square(data['ScreenW']) + np.square(data['ScreenH'])) / data['Screen_Size']).round(2)
