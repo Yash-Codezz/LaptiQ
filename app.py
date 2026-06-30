@@ -2,8 +2,11 @@ import time
 from datetime import datetime
 
 import joblib
+import numpy as np
 import pandas as pd
 import streamlit as st
+
+import shap
 
 
 from src.preprocess import preprocess
@@ -23,6 +26,13 @@ def load_model():
     return joblib.load("model/LaptiQ.pkl")
 
 model = load_model()
+
+@st.cache_resource
+def load_explainer():
+    xgb_model = model.regressor_.named_steps['laptiQ']
+    return shap.TreeExplainer(xgb_model)
+
+explainer = load_explainer()
 
 
 STORAGE_MAP = {
@@ -44,7 +54,7 @@ if "compare_active_tab" not in st.session_state:
     st.session_state["compare_active_tab"] = 0
 
 
-# Indian number format: 124990 -> "1,24,990"
+# --- Indian number format -------------------------------
 def indian_format(price: int) -> str:
     s = str(price)
     if len(s) <= 3:
@@ -57,6 +67,86 @@ def indian_format(price: int) -> str:
         rest = rest[:-2]
     groups = [g for g in reversed(groups) if g]
     return ",".join(groups) + "," + last3
+
+FEATURE_LABELS = {
+    "oridinal__GPU_Tier":              "Graphics Tier",
+    "oridinal__CPU_Series":            "Processor Series",
+    "oridinal__CPU_Segment":           "Processor Segment",
+    "oridinal__CPU_Generation":        "Processor Generation",
+    "one_hot__Brand_Apple":            "Brand: Apple",
+    "one_hot__Brand_Asus":             "Brand: Asus",
+    "one_hot__Brand_Dell":             "Brand: Dell",
+    "one_hot__Brand_HP":               "Brand: HP",
+    "one_hot__Brand_Lenovo":           "Brand: Lenovo",
+    "one_hot__Brand_MSI":              "Brand: MSI",
+    "one_hot__Brand_Samsung":          "Brand: Samsung",
+    "one_hot__Laptop_Type_Business":   "Type: Business",
+    "one_hot__Laptop_Type_Creator":    "Type: Creator",
+    "one_hot__Laptop_Type_Gaming":     "Type: Gaming",
+    "one_hot__Laptop_Type_Notebook":   "Type: Notebook",
+    "one_hot__Laptop_Type_Ultrabook":  "Type: Ultrabook",
+    "one_hot__Laptop_Type_Workstation":"Type: Workstation",
+    "one_hot__CPU_Brand_Apple":        "CPU Brand: Apple",
+    "one_hot__CPU_Brand_Intel":        "CPU Brand: Intel",
+    "one_hot__CPU_Brand_Qualcomm":     "CPU Brand: Qualcomm",
+    "one_hot__GPU_Type_Integrated":    "Integrated Graphics",
+    "one_hot__OS_Windows":             "OS: Windows",
+    "one_hot__OS_macOS":               "OS: macOS",
+    "log__RAM":                        "RAM",
+    "log__Storage":                    "Storage Capacity",
+    "yeo_johnson__Weight":             "Weight",
+    "yeo_johnson__Pixel_Per_Inch":     "Display Quality",
+    "robust_scaler__CPU_Cores":        "CPU Cores",
+    "robust_scaler__GPU_VRAM":         "Graphics Memory",
+    "robust_scaler__Laptop_Age":       "Laptop Age",
+    "remainder__Refresh_Rate":         "Refresh Rate",
+}
+
+
+def get_top_factors(explainer, encoded_array, feature_names, top_n=5):
+    shap_values = explainer.shap_values(encoded_array)[0]
+    baseline_log = explainer.expected_value
+    base_price = np.exp(baseline_log)
+
+    factors = []
+    for name, value in zip(feature_names, shap_values):
+        rupee_shift = np.exp(baseline_log + value) - base_price
+        label = FEATURE_LABELS.get(name, name)
+        factors.append({
+            "label": label,
+            "impact": int(round(rupee_shift)),
+            "direction": "up" if rupee_shift >= 0 else "down",
+        })
+
+    factors.sort(key=lambda f: abs(f["impact"]), reverse=True)
+    return factors[:top_n]
+
+
+def render_shap_html(factors, compact=False):
+    if not factors:
+        return ""
+    max_imp = max(abs(f["impact"]) for f in factors) or 1
+    rows = ""
+    for i, f in enumerate(factors):
+        d = f["direction"]
+        sign = "+" if d == "up" else "&minus;"
+        pct = min(abs(f["impact"]) / max_imp * 100, 100)
+        delay = 0.3 + i * 0.07
+        rows += (
+            f'<div class="shap-row" style="animation-delay:{delay:.2f}s">'
+            f'<div class="shap-dot {d}"></div>'
+            f'<span class="shap-name">{f["label"]}</span>'
+            f'<span class="shap-val {d}">{sign}\u20b9{indian_format(abs(f["impact"]))}</span>'
+            f'<div class="shap-bar-bg"><div class="shap-bar-fg {d}" style="width:{pct:.0f}%"></div></div>'
+            f'</div>'
+        )
+    cls = "shap-wrap compact" if compact else "shap-wrap"
+    return (
+        f'<div class="{cls}">'
+        f'<div class="shap-title">\U0001f50d What Drives This Price?</div>'
+        f'{rows}'
+        f'</div>'
+    )
 
 
 # =============================================================================
@@ -707,6 +797,114 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
     .result-subprice { font-size: 0.88rem; }
     .compare-col-header { font-size: 0.95rem; }
 }
+/* SHAP price factors */
+.shap-wrap {
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+    animation: fadeUp 0.5s ease forwards;
+    animation-delay: 0.15s;
+    opacity: 0;
+}
+
+.shap-wrap.compact { max-width: 100%; margin-top: 1rem; }
+
+.shap-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a463f2;
+    text-align: center;
+    margin-bottom: 0.65rem;
+}
+
+.shap-row {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
+    margin-bottom: 0.35rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+    animation: fadeUp 0.4s ease forwards;
+    opacity: 0;
+}
+
+.shap-row:hover {
+    background: rgba(255,255,255,0.045);
+    transform: translateX(3px);
+}
+
+.shap-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.shap-dot.up {
+    background: #23d5ab;
+    box-shadow: 0 0 6px rgba(35,213,171,0.4);
+}
+
+.shap-dot.down {
+    background: #f2639a;
+    box-shadow: 0 0 6px rgba(242,99,154,0.4);
+}
+
+.shap-name {
+    flex: 1;
+    font-size: 0.82rem;
+    color: #b0b0c8;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.shap-val {
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.shap-val.up   { color: #23d5ab; }
+.shap-val.down { color: #f2639a; }
+
+.shap-bar-bg {
+    width: 48px;
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.shap-bar-fg {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.shap-bar-fg.up   { background: linear-gradient(90deg, #1cc49e, #23d5ab); }
+.shap-bar-fg.down { background: linear-gradient(90deg, #e84393, #f2639a); }
+
+@media (max-width: 768px) {
+    .shap-wrap { margin-top: 1.2rem; }
+    .shap-bar-bg { display: none; }
+    .shap-name { font-size: 0.78rem; }
+    .shap-val  { font-size: 0.78rem; }
+    .shap-row  { padding: 0.5rem 0.75rem; gap: 0.45rem; }
+}
+
+@media (max-width: 480px) {
+    .shap-row   { padding: 0.45rem 0.65rem; border-radius: 8px; }
+    .shap-name  { font-size: 0.75rem; }
+    .shap-val   { font-size: 0.75rem; }
+    .shap-title { font-size: 0.7rem; letter-spacing: 1.2px; }
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -971,6 +1169,11 @@ def predict_laptop(form_data):
 
     input_df   = pd.DataFrame([input_data])
     processed  = preprocess(input_df)
+    encoded_array = model.regressor_.named_steps['pipeline'].transform(processed)
+    feature_names = model.regressor_.named_steps['pipeline'].get_feature_names_out()
+    top_factors = get_top_factors(explainer, encoded_array, feature_names, top_n=5)
+
+
     prediction = model.predict(processed)
     price      = int(round(prediction[0]))
 
@@ -983,6 +1186,7 @@ def predict_laptop(form_data):
         indian_format(price),
         indian_format(lower_price),
         indian_format(upper_price),
+        top_factors,
     )
 
 
@@ -1165,6 +1369,12 @@ if st.session_state["page"] == "home":
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
+
+                # SHAP explainability
+                encoded_array = model.regressor_.named_steps['pipeline'].transform(processed)
+                feature_names = model.regressor_.named_steps['pipeline'].get_feature_names_out()
+                top_factors = get_top_factors(explainer, encoded_array, feature_names, top_n=5)
+                st.markdown(render_shap_html(top_factors), unsafe_allow_html=True)
 
             except Exception as e:
                 placeholder.empty()
@@ -1395,7 +1605,7 @@ elif st.session_state["page"] == "compare":
                 for (
                     laptop_idx, fd,
                     (price, lower_price, upper_price,
-                     formatted, formatted_lower, formatted_upper),
+                     formatted, formatted_lower, formatted_upper, top_factors),
                 ) in results:
                     with result_cols[laptop_idx]:
                         is_best = (
@@ -1416,6 +1626,7 @@ elif st.session_state["page"] == "compare":
 <div class="result-subprice">(Most likely around ₹{formatted})</div>
 {badge_html}
 </div></div>""", unsafe_allow_html=True)
+                        st.markdown(render_shap_html(top_factors, compact=True), unsafe_allow_html=True)
 
     st.markdown("""
     <div class="footer-note">
