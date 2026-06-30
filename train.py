@@ -42,7 +42,7 @@ onehot_branch = Pipeline(steps=[
 ])
 
 log_transform = Pipeline(steps=[
-    ('log_transformation', FunctionTransformer(np.log1p))
+    ('log_transformation', FunctionTransformer(np.log1p, feature_names_out='one-to-one'))
 ])
 
 power_transform = Pipeline(steps=[
