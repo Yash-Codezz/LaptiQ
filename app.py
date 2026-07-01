@@ -68,38 +68,39 @@ def indian_format(price: int) -> str:
     groups = [g for g in reversed(groups) if g]
     return ",".join(groups) + "," + last3
 
-FEATURE_LABELS = {
-    "oridinal__GPU_Tier":              "Graphics Tier",
-    "oridinal__CPU_Series":            "Processor Series",
-    "oridinal__CPU_Segment":           "Processor Segment",
-    "oridinal__CPU_Generation":        "Processor Generation",
-    "one_hot__Brand_Apple":            "Brand: Apple",
-    "one_hot__Brand_Asus":             "Brand: Asus",
-    "one_hot__Brand_Dell":             "Brand: Dell",
-    "one_hot__Brand_HP":               "Brand: HP",
-    "one_hot__Brand_Lenovo":           "Brand: Lenovo",
-    "one_hot__Brand_MSI":              "Brand: MSI",
-    "one_hot__Brand_Samsung":          "Brand: Samsung",
-    "one_hot__Laptop_Type_Business":   "Type: Business",
-    "one_hot__Laptop_Type_Creator":    "Type: Creator",
-    "one_hot__Laptop_Type_Gaming":     "Type: Gaming",
-    "one_hot__Laptop_Type_Notebook":   "Type: Notebook",
-    "one_hot__Laptop_Type_Ultrabook":  "Type: Ultrabook",
-    "one_hot__Laptop_Type_Workstation":"Type: Workstation",
-    "one_hot__CPU_Brand_Apple":        "CPU Brand: Apple",
-    "one_hot__CPU_Brand_Intel":        "CPU Brand: Intel",
-    "one_hot__CPU_Brand_Qualcomm":     "CPU Brand: Qualcomm",
-    "one_hot__GPU_Type_Integrated":    "Integrated Graphics",
-    "one_hot__OS_Windows":             "OS: Windows",
-    "one_hot__OS_macOS":               "OS: macOS",
-    "log__RAM":                        "RAM",
-    "log__Storage":                    "Storage Capacity",
-    "yeo_johnson__Weight":             "Weight",
-    "yeo_johnson__Pixel_Per_Inch":     "Display Quality",
-    "robust_scaler__CPU_Cores":        "CPU Cores",
-    "robust_scaler__GPU_VRAM":         "Graphics Memory",
-    "robust_scaler__Laptop_Age":       "Laptop Age",
-    "remainder__Refresh_Rate":         "Refresh Rate",
+
+FEATURE_GROUPS = {
+    "oridinal__GPU_Tier":               "Graphic-Card",
+    "oridinal__CPU_Series":             "CPU",
+    "oridinal__CPU_Segment":            "CPU",
+    "oridinal__CPU_Generation":         "CPU",
+    "one_hot__Brand_Apple":             "Brand",
+    "one_hot__Brand_Asus":              "Brand",
+    "one_hot__Brand_Dell":              "Brand",
+    "one_hot__Brand_HP":                "Brand",
+    "one_hot__Brand_Lenovo":            "Brand",
+    "one_hot__Brand_MSI":               "Brand",
+    "one_hot__Brand_Samsung":           "Brand",
+    "one_hot__Laptop_Type_Business":    "Laptop Type",
+    "one_hot__Laptop_Type_Creator":     "Laptop Type",
+    "one_hot__Laptop_Type_Gaming":      "Laptop Type",
+    "one_hot__Laptop_Type_Notebook":    "Laptop Type",
+    "one_hot__Laptop_Type_Ultrabook":   "Laptop Type",
+    "one_hot__Laptop_Type_Workstation": "Laptop Type",
+    "one_hot__CPU_Brand_Apple":         "CPU Brand",
+    "one_hot__CPU_Brand_Intel":         "CPU Brand",
+    "one_hot__CPU_Brand_Qualcomm":      "CPU Brand",
+    "one_hot__GPU_Type_Integrated":     "GPU Type",
+    "one_hot__OS_Windows":              "Operating System",
+    "one_hot__OS_macOS":                "Operating System",
+    "log__RAM":                         "RAM",
+    "log__Storage":                     "Storage Capacity",
+    "yeo_johnson__Weight":              "Weight",
+    "yeo_johnson__Pixel_Per_Inch":      "Display Quality ",
+    "robust_scaler__CPU_Cores":         "CPU Cores",
+    "robust_scaler__GPU_VRAM":          "Graphics Memory (VRAM)",
+    "robust_scaler__Laptop_Age":        "Launch Year",
+    "remainder__Refresh_Rate":          "Refresh Rate",
 }
 
 
@@ -108,14 +109,21 @@ def get_top_factors(explainer, encoded_array, feature_names, top_n=5):
     baseline_log = explainer.expected_value
     base_price = np.exp(baseline_log)
 
-    factors = []
+    col_impacts = {}
     for name, value in zip(feature_names, shap_values):
-        rupee_shift = np.exp(baseline_log + value) - base_price
-        label = FEATURE_LABELS.get(name, name)
+        col_impacts[name] = np.exp(baseline_log + value) - base_price
+
+    group_impacts = {}
+    for col_name, rupee_shift in col_impacts.items():
+        group = FEATURE_GROUPS.get(col_name, col_name)
+        group_impacts[group] = group_impacts.get(group, 0) + rupee_shift
+
+    factors = []
+    for label, impact in group_impacts.items():
         factors.append({
-            "label": label,
-            "impact": int(round(rupee_shift)),
-            "direction": "up" if rupee_shift >= 0 else "down",
+            "label":     label,
+            "impact":    int(round(impact)),
+            "direction": "up" if impact >= 0 else "down",
         })
 
     factors.sort(key=lambda f: abs(f["impact"]), reverse=True)
