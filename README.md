@@ -141,8 +141,8 @@ After every prediction, LaptiQ uses SHAP (SHapley Additive exPlanations) to show
 One-hot encoded columns (Brand, Laptop Type, OS etc.) are grouped back into their parent feature before ranking, so the UI shows "Laptop Type" not 6 separate binary columns.
 
 ```
-↑ Display Quality (PPI)        +₹33,973
-↑ Graphics Tier                +₹30,935
+↑ Display Quality        +₹33,973
+↑ Graphic-Card                +₹30,935
 ↓ Storage Capacity             -₹13,154
 ↓ RAM                          -₹10,579
 ↓ Graphics Memory (VRAM)        -₹4,899
