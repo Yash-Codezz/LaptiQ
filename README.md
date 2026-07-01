@@ -1,7 +1,7 @@
 # 💻 LaptiQ
 ### Know what your laptop is worth
 
-LaptiQ is an end-to-end machine learning web app that predicts the current Indian market price of any laptop based on its specifications. Enter your CPU, GPU, RAM, display, and other details — LaptiQ returns an estimated price in seconds.
+LaptiQ is an end-to-end machine learning web app that predicts the current Indian market price of any laptop based on its specifications. Enter your CPU, GPU, RAM, display, and other details — LaptiQ returns an estimated price range with explainability.
 
 **🚀 Live Demo →** https://laptiq.streamlit.app/
 
@@ -9,11 +9,13 @@ LaptiQ is an end-to-end machine learning web app that predicts the current India
 
 ## ✨ What it does
 
-- Takes raw laptop specs as input,
-- Engineers features automatically,
-- Runs everything through a trained XGBoost pipeline,
-- Returns a predicted market price in Indian Rupees (₹),
-- Keeps a session history of past predictions with delete support.
+- Takes raw laptop specs as input
+- Engineers features automatically (PPI, CPU tier, GPU tier, Laptop Age)
+- Runs everything through a trained XGBoost pipeline
+- Returns a predicted price **range** in Indian Rupees (₹) with ±12% margin
+- Shows the **top 5 factors** that drove the prediction using SHAP explainability
+- Lets you **compare up to 3 laptops** side-by-side with a Best Value badge
+- Keeps a session history of past predictions with delete support
 
 ---
 
@@ -39,7 +41,7 @@ laptiQ/
 │   └── Laptop_Prices_Model_Ready.csv   # fully encoded & ready for model — 935 rows, 33 cols
 │
 ├── model/
-│   └── LaptiQ.pkl                      # trained pipeline saved with joblib (0.31 MB)
+│   └── LaptiQ.pkl                      # trained pipeline saved with joblib
 │
 ├── notebooks/
 │   ├── Exploratory_Data_Analysis.ipynb # full EDA — distributions, correlations, feature decisions
@@ -47,7 +49,7 @@ laptiQ/
 │
 ├── src/
 │   ├── __init__.py
-│   └── preprocess.py                   # feature engineering function used by both train.py and app.py
+│   └── preprocess.py                   # feature engineering function used by train.py and app.py
 │
 ├── app.py                              # Streamlit web app
 ├── train.py                            # pipeline training + GridSearchCV
@@ -61,11 +63,9 @@ laptiQ/
 
 Three versions of the dataset are included so you can follow the full transformation journey:
 
-**`Laptop_Prices.csv`** — Raw data as collected. 
+**`Laptop_Prices.csv`** — Raw data as collected. 937 laptops, 18 columns. String columns like `CPU_Model`, `GPU_Model`, `Resolution` exactly as captured.
 
-**`Laptop_Prices_Featured.csv`** — After feature engineering,
-- what new features are added
-- removing unnecessary columns that are creating hinderance.
+**`Laptop_Prices_Featured.csv`** — After `preprocess()` runs. Raw strings replaced with engineered features:
 
 ```
 + Laptop_Age       (from Launch_Year)
@@ -78,13 +78,13 @@ Three versions of the dataset are included so you can follow the full transforma
 - Launch_Year, CPU_Model, GPU_Model, Resolution, Screen_Size, Storage_Type removed
 ```
 
-**`Laptop_Prices_Model_Ready.csv`** — This file shows how a model understands and learn from the data.
+**`Laptop_Prices_Model_Ready.csv`** — Fully encoded and scaled. What the XGBoost model actually trains on — 33 numeric columns, no strings. This is what the model sees and learns from.
 
 ---
 
 ## ⚙️ How It Works
 
-**Step 1 — EDA :**
+**Step 1 — EDA**
 
 Analysed 937 laptops across 18 features. Key decisions made:
 - Price is right-skewed (mean ₹1.44L vs median ₹1.08L) → log transform on target
@@ -94,7 +94,7 @@ Analysed 937 laptops across 18 features. Key decisions made:
 - `CPU_Model` (138 unique values) → 3 ordinal features instead of one-hot encoding
 - `GPU_Model` (52 unique values) → GPU_Tier (low/mid/high)
 
-**Step 2 — Feature Engineering :**
+**Step 2 — Feature Engineering**
 
 | Raw Column | Engineered Output | Logic |
 |---|---|---|
@@ -107,7 +107,7 @@ Analysed 937 laptops across 18 features. Key decisions made:
 | `GPU_VRAM` | `GPU_VRAM` (int) | "Shared"→0, strip "GB" → int |
 | `Storage_Type` | — | dropped (99% SSD) |
 
-**Step 3 — Pipeline :**
+**Step 3 — Pipeline**
 
 Full sklearn `Pipeline` with `ColumnTransformer` — all transformers fit on train data only, no leakage:
 
@@ -125,10 +125,34 @@ TransformedTargetRegressor  → log1p(Price) during fit, expm1 at predict
 
 Best params: `n_estimators=200, max_depth=4, learning_rate=0.1, subsample=0.8, colsample_bytree=0.8`
 
-**Step 4 — UI :** 
+**Step 4 — Price Range**
 
-Streamlit UI with three pages accessible from the sidebar:
-- 🏠 **Home** — enter specs, get predicted price
+Instead of a single predicted value, LaptiQ returns a ±12% price range rounded to the nearest ₹500 — honest about the model's real uncertainty (MAE is 11.68%) without false precision.
+
+```
+Predicted:  ₹1,27,855
+Range:      ₹1,12,500 – ₹1,43,000
+```
+
+**Step 5 — SHAP Explainability**
+
+After every prediction, LaptiQ uses SHAP (SHapley Additive exPlanations) to show the top 5 factors that influenced the price — with approximate rupee impact for each.
+
+One-hot encoded columns (Brand, Laptop Type, OS etc.) are grouped back into their parent feature before ranking, so the UI shows "Laptop Type" not 6 separate binary columns.
+
+```
+↑ Display Quality (PPI)        +₹33,973
+↑ Graphics Tier                +₹30,935
+↓ Storage Capacity             -₹13,154
+↓ RAM                          -₹10,579
+↓ Graphics Memory (VRAM)        -₹4,899
+```
+
+**Step 6 — App**
+
+Streamlit UI with four pages:
+- 🏠 **Home** — enter specs, get price range + SHAP factors
+- ⚖️ **Compare** — compare up to 3 laptops side-by-side, Best Value badge on the cheapest
 - 🕒 **History** — view and delete past predictions (session-based, max 20)
 - 📊 **Model Info** — model stats and how it works
 
@@ -138,8 +162,8 @@ Streamlit UI with three pages accessible from the sidebar:
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/yourusername/laptiQ.git
-cd laptiQ
+git clone https://github.com/Yash-Codezz/LaptiQ.git
+cd LaptiQ
 ```
 
 **2. Install dependencies**
@@ -170,6 +194,7 @@ Takes ~1 minute. Saves the new model to `model/LaptiQ.pkl`.
 | ML Model | XGBoost |
 | ML Pipeline | scikit-learn — Pipeline, ColumnTransformer, TransformedTargetRegressor, GridSearchCV |
 | Preprocessing | OrdinalEncoder, OneHotEncoder, FunctionTransformer, PowerTransformer, RobustScaler |
+| Explainability | SHAP — TreeExplainer with grouped feature attribution |
 | UI | Streamlit |
 | Data | pandas, numpy |
 | Serialisation | joblib |
@@ -182,16 +207,22 @@ Takes ~1 minute. Saves the new model to `model/LaptiQ.pkl`.
 Benchmarked 7 models — Linear Regression, Lasso, Ridge, Decision Tree, Random Forest, Gradient Boosting, XGBoost. XGBoost had the best R² (92.2% pre-tuning, 93.46% post-tuning) and lowest MAE across the board.
 
 **Why log transform on Price?**
-Price is heavily right-skewed. Log transform brings it closer to normal, and improves model performance significantly. `TransformedTargetRegressor` handles this inside the pipeline cleanly — no manual inverse transform needed.
+Price is heavily right-skewed. Log transform brings it closer to normal and improves model performance significantly. `TransformedTargetRegressor` handles this inside the pipeline — no manual inverse transform needed.
 
 **Why PPI instead of Resolution + Screen Size separately?**
 Both had weak individual correlations with price. Combined as pixel density, the signal is much stronger. A 4K 13" screen is very different from a 4K 17" screen — PPI captures that.
 
 **Why drop Storage_Type?**
-99% of laptops in the dataset are SSD. The column carries almost no information — keeping it adds noise without adding signal.
+99% of laptops in the dataset are SSD. The column carries almost no information.
 
 **Why 3 CPU features instead of one-hot encoding CPU_Model?**
-`CPU_Model` had 138 unique values. One-hot encoding would create 138 columns, most nearly empty. Breaking it into `CPU_Series` + `CPU_Segment` + `CPU_Generation` captures the meaningful variance in 3 clean ordinal columns.
+`CPU_Model` had 138 unique values. One-hot encoding would create 138 sparse columns. Breaking it into `CPU_Series` + `CPU_Segment` + `CPU_Generation` captures the meaningful variance in 3 clean ordinal columns.
+
+**Why a price range instead of a single value?**
+A single number implies false precision. The model's MAE is 11.68% — on a ₹1.2L laptop that's ±₹14K. Showing a range is more honest and builds more trust with users than pretending the model is more accurate than it is.
+
+**Why SHAP over feature importance?**
+Global feature importance tells you which features matter across all predictions. SHAP tells you which features drove *this specific* prediction — much more useful for a user who wants to understand why their particular laptop got that price.
 
 ---
 
@@ -208,12 +239,12 @@ Both had weak individual correlations with price. Combined as pixel density, the
 
 ---
 
-## 👨‍💻 Author:
+## 👨‍💻 Author
 
 **Yash**
 
-⭐ If you like this project, don’t forget to star the repository on GitHub!
+⭐ If you found this useful, star the repo on GitHub!
 
 ---
 
-*Built as an end-to-end ML project — EDA → feature engineering → pipeline → deployment.*
+*Built as an end-to-end ML project — EDA → feature engineering → pipeline → deployment → explainability.*
