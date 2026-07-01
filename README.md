@@ -98,13 +98,13 @@ Analysed 937 laptops across 18 features. Key decisions made:
 
 | Raw Column | Engineered Output | Logic |
 |---|---|---|
-| `Launch_Year` | `Laptop_Age` | 2026 − Launch_Year |
+| `Launch_Year` | `Laptop_Age` | Current_Year − Launch_Year |
 | `CPU_Model` | `CPU_Series` | regex → low/mid/high tier |
 | `CPU_Model` | `CPU_Segment` | suffix (H/HX/U/etc.) → low/mid/high |
 | `CPU_Model` | `CPU_Generation` | modern vs latest chip architecture |
 | `GPU_Model` | `GPU_Tier` | regex → low/mid/high tier |
 | `Resolution` + `Screen_Size` | `Pixel_Per_Inch` | √(W²+H²) / screen_size |
-| `GPU_VRAM` | `GPU_VRAM` (int) | "Shared"→0, strip "GB" → int |
+| `GPU_VRAM` | `GPU_VRAM` | "Shared"→0, strip "GB" → int |
 | `Storage_Type` | — | dropped (99% SSD) |
 
 **Step 3 — Pipeline**
@@ -127,8 +127,7 @@ Best params: `n_estimators=200, max_depth=4, learning_rate=0.1, subsample=0.8, c
 
 **Step 4 — Price Range**
 
-Instead of a single predicted value, LaptiQ returns a ±12% price range rounded to the nearest ₹500 — honest about the model's real uncertainty (MAE is 11.68%) without false precision.
-
+Instead of a single predicted value, LaptiQ returns a ±12% price range rounded to the nearest ₹500.
 ```
 Predicted:  ₹1,27,855
 Range:      ₹1,12,500 – ₹1,43,000
@@ -136,25 +135,22 @@ Range:      ₹1,12,500 – ₹1,43,000
 
 **Step 5 — SHAP Explainability**
 
-After every prediction, LaptiQ uses SHAP (SHapley Additive exPlanations) to show the top 5 factors that influenced the price — with approximate rupee impact for each.
-
-One-hot encoded columns (Brand, Laptop Type, OS etc.) are grouped back into their parent feature before ranking, so the UI shows "Laptop Type" not 6 separate binary columns.
-
+After every prediction, LaptiQ uses SHAP to show the top 5 factors that influenced the price.
 ```
-↑ Display Quality        +₹33,973
+↑ Display Quality             +₹33,973
 ↑ Graphic-Card                +₹30,935
-↓ Storage Capacity             -₹13,154
-↓ RAM                          -₹10,579
-↓ Graphics Memory (VRAM)        -₹4,899
+↓ Storage Capacity            -₹13,154
+↓ RAM                         -₹10,579
+↓ Graphics Memory (VRAM)      -₹4,899
 ```
 
 **Step 6 — App**
 
 Streamlit UI with four pages:
 - 🏠 **Home** — enter specs, get price range + SHAP factors
-- ⚖️ **Compare** — compare up to 3 laptops side-by-side, Best Value badge on the cheapest
-- 🕒 **History** — view and delete past predictions (session-based, max 20)
+- 🕒 **History** — view and delete past predictions
 - 📊 **Model Info** — model stats and how it works
+- ⚖️ **Compare** — compare up to 3 laptops side-by-side, Best Value badge on the cheapest
 
 ---
 
@@ -178,23 +174,17 @@ python -m streamlit run app.py
 
 Open `http://localhost:8501` in your browser. Works on mobile too via your local network URL.
 
-**To retrain the model from scratch:**
-```bash
-python train.py
-```
-Takes ~1 minute. Saves the new model to `model/LaptiQ.pkl`.
-
 ---
 
 ## 🧰 Tech Stack
 
 | Layer | Tools |
 |---|---|
-| Language | Python 3.10+ |
+| Language | Python |
 | ML Model | XGBoost |
 | ML Pipeline | scikit-learn — Pipeline, ColumnTransformer, TransformedTargetRegressor, GridSearchCV |
 | Preprocessing | OrdinalEncoder, OneHotEncoder, FunctionTransformer, PowerTransformer, RobustScaler |
-| Explainability | SHAP — TreeExplainer with grouped feature attribution |
+| Explainability | SHAP |
 | UI | Streamlit |
 | Data | pandas, numpy |
 | Serialisation | joblib |
