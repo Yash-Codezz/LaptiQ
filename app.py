@@ -154,6 +154,9 @@ def render_shap_html(factors, compact=False):
         f'</div>'
     )
 
+# =============================================================================
+#  CSS
+# =============================================================================
 
 st.markdown("""
 <style>
@@ -1216,7 +1219,7 @@ _lqObs.observe(document.body, {childList: true, subtree: true});
 </script>
 """, unsafe_allow_javascript=True)
 
-
+# --- Side-Bar Navigation ------------------------------
 with st.sidebar:
     active = st.session_state["page"]
 
@@ -1413,6 +1416,9 @@ def predict_laptop(form_data):
         top_factors,
     )
 
+# =============================================================================
+#  PAGE: HOME
+# =============================================================================
 
 if st.session_state["page"] == "home":
 
@@ -1612,6 +1618,9 @@ if st.session_state["page"] == "home":
     </div>
     """, unsafe_allow_html=True)
 
+# =============================================================================
+#  PAGE: HISTORY
+# =============================================================================
 
 elif st.session_state["page"] == "history":
 
@@ -1672,6 +1681,9 @@ elif st.session_state["page"] == "history":
 
             st.markdown('<div class="h-separator">&nbsp;</div>', unsafe_allow_html=True)
 
+# =============================================================================
+#  PAGE: MODEL INFO
+# =============================================================================
 
 elif st.session_state["page"] == "model_info":
 
@@ -1688,6 +1700,7 @@ elif st.session_state["page"] == "model_info":
     </div>
     """, unsafe_allow_html=True)
 
+# --- Model Stats ------------------------------
     st.markdown("""
     <div class="section-title-wrap">
         <div class="section-icon">
@@ -1739,7 +1752,8 @@ elif st.session_state["page"] == "model_info":
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("""
+# --- How It Works ------------------------------
+    st.markdown("""
     <div class="section-title-wrap">
         <div class="section-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
@@ -1774,6 +1788,10 @@ elif st.session_state["page"] == "model_info":
     </div>
     """, unsafe_allow_html=True)
 
+
+# =============================================================================
+#  PAGE: COMPARE
+# =============================================================================
 
 elif st.session_state["page"] == "compare":
 
@@ -1825,6 +1843,7 @@ elif st.session_state["page"] == "compare":
             form_data = render_laptop_form(idx + 1)
             forms.append(form_data)
 
+# --- Compare Button ------------------------------
         st.markdown("<br>", unsafe_allow_html=True)
     compare_clicked = st.button("Compare Prices  →", type="primary", use_container_width=True)
 
@@ -1869,6 +1888,7 @@ elif st.session_state["page"] == "compare":
                 # Identify the laptop with the lowest predicted price
                 best_laptop_idx = min(results, key=lambda x: x[2][0])[0]
 
+# --- Three Columns ------------------------------
                 result_cols = st.columns(3)
                 for (
                     laptop_idx, fd,
