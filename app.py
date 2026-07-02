@@ -45,7 +45,6 @@ STORAGE_MAP = {
 }
 
 
-# initialise session state on first load
 if "page" not in st.session_state:
     st.session_state["page"] = "home"
 if "history" not in st.session_state:
@@ -54,7 +53,6 @@ if "compare_active_tab" not in st.session_state:
     st.session_state["compare_active_tab"] = 0
 
 
-# --- Indian number format -------------------------------
 def indian_format(price: int) -> str:
     s = str(price)
     if len(s) <= 3:
@@ -151,15 +149,12 @@ def render_shap_html(factors, compact=False):
     cls = "shap-wrap compact" if compact else "shap-wrap"
     return (
         f'<div class="{cls}">'
-        f'<div class="shap-title">\U0001f50d What Drives This Price?</div>'
+        f'<div class="shap-title">What Drives This Price?</div>'
         f'{rows}'
         f'</div>'
     )
 
 
-# =============================================================================
-#  CSS
-# =============================================================================
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -266,37 +261,36 @@ div.stButton > button:active {
     box-shadow: 0 2px 8px rgba(35,213,171,0.2);
 }
 
-/* sidebar nav buttons */
+/* sidebar nav buttons — YouTube style */
 section[data-testid="stSidebar"] div.stButton > button {
-    background: rgba(255,255,255,0.03) !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
-    border-left: 3px solid transparent !important;
+    background: transparent !important;
+    border: none !important;
     border-radius: 10px !important;
-    color: #8a8aa0 !important;
-    font-size: 0.9rem !important;
+    color: #a0a0b8 !important;
+    font-size: 0.88rem !important;
     font-weight: 500 !important;
     text-transform: none !important;
-    letter-spacing: 0 !important;
+    letter-spacing: 0.2px !important;
     box-shadow: none !important;
-    padding: 0.7rem 0.9rem !important;
-    min-height: 44px !important;   /* touch target for mobile */
-    margin-bottom: 0.4rem !important;
+    padding: 0.6rem 0.75rem !important;
+    min-height: 40px !important;
+    margin-bottom: 0.15rem !important;
     text-align: left !important;
     justify-content: flex-start !important;
+    transition: background 0.15s ease, color 0.15s ease !important;
 }
 
 section[data-testid="stSidebar"] div.stButton > button:hover {
-    background: rgba(255,255,255,0.055) !important;
-    color: #c0c0d0 !important;
+    background: rgba(255,255,255,0.07) !important;
+    color: #e0e0f0 !important;
     transform: none !important;
     box-shadow: none !important;
 }
 
-/* active nav button */
+/* active nav button — YouTube filled background */
 section[data-testid="stSidebar"] div.stButton > button.nav-active {
-    background: rgba(35,213,171,0.08) !important;
-    border-left-color: #23d5ab !important;
-    color: #e0e0f0 !important;
+    background: rgba(255,255,255,0.1) !important;
+    color: #ffffff !important;
     font-weight: 600 !important;
 }
 
@@ -360,10 +354,14 @@ section[data-testid="stSidebar"] div.stButton > button.nav-active {
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* sidebar */
+/* sidebar — YouTube style */
 section[data-testid="stSidebar"] {
-    background: #111120 !important;
-    border-right: 1px solid rgba(255,255,255,0.04);
+    background: #0f0f1a !important;
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+    padding-top: 1rem !important;
 }
 
 .nav-label {
@@ -376,15 +374,29 @@ section[data-testid="stSidebar"] {
     padding-left: 0.2rem;
 }
 
-/* history cards */
-.h-card {
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(255,255,255,0.055);
-    border-left: 3px solid #23d5ab;
-    border-radius: 12px;
-    padding: 1.1rem 1.25rem 0.9rem;
-    margin-bottom: 0.9rem;
+.sb-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 0.6rem 0.5rem;
 }
+
+/* history entries */
+.h-card {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 1.1rem 0;
+    margin-bottom: 0;
+}
+
+.h-separator {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 0;
+}
+
+
 
 .h-brand   { font-size: 1rem; font-weight: 700; color: #e0e0f0; }
 .h-type    { font-size: 0.78rem; color: #7c7c90; margin-left: 0.4rem; }
@@ -462,73 +474,160 @@ button.btn-del:hover {
 }
 
 /* model info page */
-.mi-desc {
-    color: #8a8aa0;
-    font-size: 0.95rem;
-    max-width: 620px;
-    margin: 0.5rem auto 2rem;
-    line-height: 1.7;
-    text-align: center;
-}
-
-.mi-section {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
-    color: #23d5ab;
-    margin: 2rem 0 0.9rem;
-}
-
-.mi-step {
+.section-title-wrap {
     display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(255,255,255,0.055);
-    border-radius: 10px;
-    padding: 0.85rem 1.1rem;
-    margin-bottom: 0.6rem;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 2rem 0 1.2rem;
+}
+.section-icon {
+    display: flex;
+    align-items: center;
+    color: #4e8cff;
+}
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e0e0f0;
+}
+.section-divider {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
 }
 
-.mi-num {
-    font-size: 0.7rem;
-    font-weight: 800;
-    color: #0f0f1a;
-    background: linear-gradient(135deg, #23d5ab, #1cc49e);
-    border-radius: 50%;
-    width: 24px; height: 24px;
+.sb-stat-new {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Sections */
+.fs-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1.5rem 0 1rem;
+}
+.fs-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(120, 120, 250, 0.12);
+    color: #8c8df0;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
 }
-
-.mi-text { font-size: 0.88rem; color: #c0c0d0; line-height: 1.4; }
-
-
-.sb-stat {
-    background: rgba(255,255,255,0.035);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 10px;
-    padding: 0.9rem 1rem;
+.fs-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+.fs-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 1rem 0 1.5rem;
+    width: 100%;
+}
+div.stButton > button[kind="primary"] {
+    background: #93C5FD !important;
+    color: #0f0f1a !important;
+    font-weight: 700 !important;
+    border: none !important;
+}
+div.stButton > button[kind="primary"]:hover {
+    background: #bfdbfe !important;
+    color: #0f0f1a !important;
+}
+.sb-stat-new-extra {
+    border-radius: 12px;
+    padding: 1.25rem;
     margin-bottom: 0.7rem;
+    display: flex;
+    flex-direction: column;
 }
+.sb-stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+.sb-stat-title {
+    font-size: 0.9rem;
+    color: #c0c0d0;
+    font-weight: 500;
+}
+.sb-stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sb-stat-icon.blue { background: rgba(78, 140, 255, 0.12); color: #4e8cff; }
+.sb-stat-icon.orange { background: rgba(234, 179, 8, 0.12); color: #eab308; }
+.sb-stat-icon.purple { background: rgba(180, 108, 248, 0.12); color: #b46cf8; }
 
-.sb-stat-label {
-    font-size: 0.7rem;
-    color: #7c7c90;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
+.sb-stat-val-new { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.4rem; }
+.sb-stat-val-new.blue { color: #93C5FD; }
+.sb-stat-val-new.orange { color: #FCD34D; }
+.sb-stat-val-new.purple { color: #C4B5FD; }
+
+.sb-stat-sub { font-size: 0.75rem; color: #7c7c90; }
+
+.mi-step-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 0.8rem;
+    transition: background 0.2s ease;
+}
+.mi-step-card:hover {
+    background: rgba(255,255,255,0.04);
+}
+.mi-step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #3b5bdb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-right: 1.2rem;
+}
+.mi-step-content {
+    flex: 1;
+}
+.mi-step-title {
+    font-size: 0.95rem;
+    color: #e0e0f0;
+    font-weight: 500;
     margin-bottom: 0.25rem;
 }
-
-.sb-stat-val        { font-size: 1.35rem; font-weight: 800; }
-.sb-stat-val.green  { color: #23d5ab; }
-.sb-stat-val.orange { color: #f2a623; }
-.sb-stat-val.purple { color: #a463f2; }
+.mi-step-desc {
+    font-size: 0.82rem;
+    color: #8a8aa0;
+}
+.mi-step-chevron {
+    flex-shrink: 0;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
 
 .footer-note {
     text-align: center;
@@ -762,7 +861,7 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
 
     div.stButton > button  { padding: 0.85rem 1.5rem; font-size: 1rem; border-radius: 10px; }
     .result-box            { padding: 1.3rem 1rem; margin: 1rem auto; border-radius: 12px; }
-    .result-price          { font-size: 1.7rem; }
+    .result-price          { font-size: 1.7rem !important; }
     .result-subprice       { font-size: 0.82rem; }
     .result-label          { font-size: 0.75rem; letter-spacing: 1.2px; }
     .footer-note           { font-size: 0.7rem; margin-top: 1.5rem; }
@@ -789,7 +888,7 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
     .laptiq-title  { font-size: 1.8rem; }
     .laptiq-sub    { font-size: 0.82rem; margin-bottom: 1.2rem; }
     .card          { padding: 0.85rem 0.85rem 0.4rem; }
-    .result-price  { font-size: 1.35rem; }
+    .result-price  { font-size: 1.35rem !important; }
     .result-subprice { font-size: 0.75rem; }
     .h-price       { font-size: 1.1rem; }
 
@@ -801,7 +900,7 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
 @media (min-width: 769px) and (max-width: 1024px) {
     .laptiq-title { font-size: 2.8rem; }
     .block-container { padding-left: 1rem !important; padding-right: 1rem !important; }
-    .result-price { font-size: 2rem; }
+    .result-price { font-size: 2rem !important; }
     .result-subprice { font-size: 0.88rem; }
     .compare-col-header { font-size: 0.95rem; }
 }
@@ -821,7 +920,7 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #a463f2;
+    color: #C4B5FD;
     text-align: center;
     margin-bottom: 0.65rem;
 }
@@ -913,11 +1012,144 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
     .shap-val   { font-size: 0.75rem; }
     .shap-title { font-size: 0.7rem; letter-spacing: 1.2px; }
 }
+
+/* ── Hero Section ───────────────────────────────────────── */
+.hero-section {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem 1.2rem 2rem;
+    background: #0f0f1a;
+    background-image: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(35,213,171,0.06) 0%, transparent 70%);
+    overflow: hidden;
+}
+
+.hero-section.hero-compact {
+    min-height: auto;
+    padding: 1.8rem 1.2rem 1.4rem;
+}
+
+.hero-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #23d5ab;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0s;
+}
+
+.hero-heading {
+    opacity: 1;
+}
+
+.hero-line-1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: #8a8aa0;
+    line-height: 1;
+    margin: 0;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.hero-line-2 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0.5rem 0 0 0;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    color: #7c7c90;
+    margin-top: 0.5rem;
+    max-width: 480px;
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-pills {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.hero-pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    font-size: 0.78rem;
+    color: #a0a0b8;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.hero-accent {
+    width: 120px;
+    height: 2px;
+    margin: 1.8rem auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, #23d5ab, #a463f2, transparent);
+    background-size: 200% 100%;
+    animation: fadeUp 0.6s ease forwards, shimmer 3s ease infinite;
+    animation-delay: 0.5s, 0.5s;
+    opacity: 0;
+}
+
+@keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 240px;
+        padding: 2rem 1rem;
+    }
+    .hero-section.hero-compact {
+        padding: 1.5rem 1rem;
+    }
+    .hero-line-1,
+    .hero-line-2 {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+    }
+    .hero-subtitle {
+        font-size: 0.82rem;
+    }
+    .hero-pills {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .hero-label {
+        letter-spacing: 1.5px;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
 
-# JS to apply CSS classes to specific buttons
 st.html("""
 <script>
 function styleLaptiQButtons() {
@@ -985,17 +1217,14 @@ _lqObs.observe(document.body, {childList: true, subtree: true});
 """, unsafe_allow_javascript=True)
 
 
-# --- sidebar navigation ------------------------------
 with st.sidebar:
-    st.markdown('<div class="nav-label">Navigation</div>', unsafe_allow_html=True)
-
     active = st.session_state["page"]
 
     nav_items = [
-        ("home",       "🏠  Home"),
-        ("history",    "🕒  History"),
-        ("model_info", "📊  Model Info"),
-        ("compare",    "⚖️  Compare"),
+        ("home",       "Home"),
+        ("history",    "History"),
+        ("model_info", "Model Info"),
+        ("compare",    "Compare"),
     ]
 
     for key, label in nav_items:
@@ -1003,16 +1232,9 @@ with st.sidebar:
             st.session_state["page"] = key
             st.rerun()
 
-        if active == key:
-            st.markdown(
-                '<div style="height:2px;background:linear-gradient(90deg,#23d5ab,transparent);'
-                'border-radius:2px;margin:-0.3rem 0 0.3rem 0.9rem;width:55%;"></div>',
-                unsafe_allow_html=True
-            )
-
-    st.markdown("---")
+    st.markdown('<div class="sb-divider">&nbsp;</div>', unsafe_allow_html=True)
     st.markdown(
-        '<p style="color:#4a4a5e;font-size:0.7rem;text-align:center;">LaptiQ v1.0 · XGBoost</p>',
+        '<p style="color:#4a4a5e;font-size:0.7rem;text-align:center;margin-top:0.5rem;">LaptiQ v1.0 · XGBoost</p>',
         unsafe_allow_html=True,
     )
 
@@ -1020,7 +1242,7 @@ with st.sidebar:
 def render_laptop_form(i):
 
     st.markdown(
-        '<div class="card c-basic"><div class="card-head c-basic">🏷️ Basic Info</div>',
+        """<div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="fs-title">LAPTOP PROFILE</div></div>""",
         unsafe_allow_html=True,
     )
     brand = st.selectbox("Brand", [
@@ -1036,10 +1258,9 @@ def render_laptop_form(i):
     launch_year = st.selectbox(
         "Launch Year", [2026, 2025, 2024, 2023], key=f"launch_year_{i}"
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
-        '<div class="card c-cpu"><div class="card-head c-cpu">⚡ Processor</div>',
+        """<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div><div class="fs-title">PROCESSOR</div></div>""",
         unsafe_allow_html=True,
     )
     cpu_brand = st.selectbox(
@@ -1054,10 +1275,9 @@ def render_laptop_form(i):
     cpu_cores = st.number_input(
         "CPU Cores", min_value=2, max_value=24, value=8, step=1, key=f"cpu_cores_{i}"
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
-        '<div class="card c-mem"><div class="card-head c-mem">💾 Memory & Storage</div>',
+        """<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"></rect><path d="M6 10v4"></path><path d="M10 10v4"></path><path d="M14 10v4"></path><path d="M18 10v4"></path></svg></div><div class="fs-title">MEMORY</div></div>""",
         unsafe_allow_html=True,
     )
     ram = st.selectbox(
@@ -1070,10 +1290,9 @@ def render_laptop_form(i):
     storage_type = st.selectbox(
         "Storage Type", ["SSD", "HDD"], key=f"storage_type_{i}"
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
-        '<div class="card c-display"><div class="card-head c-display">🖥️ Display</div>',
+        """<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div><div class="fs-title">DISPLAY</div></div>""",
         unsafe_allow_html=True,
     )
     screen_size = st.selectbox(
@@ -1093,10 +1312,9 @@ def render_laptop_form(i):
         format_func=lambda x: f"{x} Hz",
         key=f"refresh_rate_{i}",
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
-        '<div class="card c-gpu"><div class="card-head c-gpu">🎮 Graphics</div>',
+        """<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg></div><div class="fs-title">GRAPHICS</div></div>""",
         unsafe_allow_html=True,
     )
     gpu_type = st.selectbox(
@@ -1114,17 +1332,15 @@ def render_laptop_form(i):
         help="Pick 'Shared' for integrated graphics with no dedicated VRAM",
         key=f"gpu_vram_{i}",
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(
-        '<div class="card c-build"><div class="card-head c-build">⚖️ Build</div>',
+        """<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div><div class="fs-title">BUILD</div></div>""",
         unsafe_allow_html=True,
     )
     weight = st.number_input(
         "Weight (kg)", min_value=0.8, max_value=4.5, value=1.8,
         step=0.1, format="%.1f", key=f"weight_{i}",
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
     return {
         "brand": brand,
@@ -1198,15 +1414,23 @@ def predict_laptop(form_data):
     )
 
 
-# =============================================================================
-#  PAGE: HOME
-# =============================================================================
 if st.session_state["page"] == "home":
 
-    st.markdown('<h1 class="laptiq-title">LaptiQ</h1>', unsafe_allow_html=True)
-    st.markdown('<p class="laptiq-sub">Know what your laptop is worth</p>', unsafe_allow_html=True)
+    st.markdown("""
+    <div class="hero-section">
+        <div class="hero-label">LaptiQ</div>
+        <div class="hero-heading">
+            <div class="hero-line-1">Know what your</div>
+            <div class="hero-line-2">Laptop is Worth</div>
+        </div>
+        <div class="hero-subtitle">
+            Enter your specs. Get a market price range. Understand why.
+        </div>
+        <div class="hero-accent">&nbsp;</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-basic"><div class="card-head c-basic">🏷️ Basic Info</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="fs-title">LAPTOP PROFILE</div></div>""", unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         brand = st.selectbox("Brand", [
@@ -1221,9 +1445,8 @@ if st.session_state["page"] == "home":
         os = st.selectbox("Operating System", ["Windows", "macOS", "ChromeOS", "Other"])
     with c4:
         launch_year = st.selectbox("Launch Year", [2026, 2025, 2024, 2023])
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-cpu"><div class="card-head c-cpu">⚡ Processor</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div><div class="fs-title">PROCESSOR</div></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1:
         cpu_brand = st.selectbox("CPU Brand", ["Intel", "AMD", "Apple", "Qualcomm"])
@@ -1235,9 +1458,8 @@ if st.session_state["page"] == "home":
         )
     with c3:
         cpu_cores = st.number_input("CPU Cores", min_value=2, max_value=24, value=8, step=1)
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-mem"><div class="card-head c-mem">💾 Memory & Storage</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"></rect><path d="M6 10v4"></path><path d="M10 10v4"></path><path d="M14 10v4"></path><path d="M18 10v4"></path></svg></div><div class="fs-title">MEMORY</div></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1:
         ram = st.selectbox("RAM", [8, 16, 24, 32, 48, 64, 96, 128], format_func=lambda x: f"{x} GB")
@@ -1245,9 +1467,8 @@ if st.session_state["page"] == "home":
         storage_label = st.selectbox("Storage", list(STORAGE_MAP.keys()))
     with c3:
         storage_type = st.selectbox("Storage Type", ["SSD", "HDD"])
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-display"><div class="card-head c-display">🖥️ Display</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div><div class="fs-title">DISPLAY</div></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1:
         screen_size = st.selectbox(
@@ -1267,9 +1488,8 @@ if st.session_state["page"] == "home":
             [60, 90, 120, 144, 165, 240, 360],
             format_func=lambda x: f"{x} Hz"
         )
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-gpu"><div class="card-head c-gpu">🎮 Graphics</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><circle cx="16" cy="12" r="2"></circle></svg></div><div class="fs-title">GRAPHICS</div></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1:
         gpu_type = st.selectbox("GPU Type", ["Dedicated", "Integrated"])
@@ -1285,14 +1505,12 @@ if st.session_state["page"] == "home":
             ["Shared", "4GB", "6GB", "8GB", "12GB", "16GB", "24GB"],
             help="Pick 'Shared' for integrated graphics with no dedicated VRAM"
         )
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="card c-build"><div class="card-head c-build">⚖️ Build</div>', unsafe_allow_html=True)
+    st.markdown("""<div class="fs-divider"></div><div class="fs-wrap"><div class="fs-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div><div class="fs-title">BUILD</div></div>""", unsafe_allow_html=True)
     weight = st.number_input("Weight (kg)", min_value=0.8, max_value=4.5, value=1.8, step=0.1, format="%.1f")
-    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    predict_clicked = st.button("⚡  Predict Price", use_container_width=True)
+    predict_clicked = st.button("Price", type="primary", use_container_width=True)
 
     if predict_clicked:
         if not cpu_model.strip():
@@ -1395,19 +1613,26 @@ if st.session_state["page"] == "home":
     """, unsafe_allow_html=True)
 
 
-# =============================================================================
-#  PAGE: HISTORY
-# =============================================================================
 elif st.session_state["page"] == "history":
 
     hist = st.session_state["history"]
 
-    top_l, top_r = st.columns([5, 1])
-    with top_l:
-        st.markdown('<h1 class="laptiq-title" style="text-align:left;font-size:2rem;">Prediction History</h1>', unsafe_allow_html=True)
-    with top_r:
-        if hist:
-            if st.button("🗑 Clear All", key="clear_all"):
+    st.markdown("""
+    <div class="hero-section hero-compact">
+        <div class="hero-heading">
+            <div class="hero-line-1">Prediction</div>
+            <div class="hero-line-2">History</div>
+        </div>
+        <div class="hero-subtitle">
+            Your recent laptop price predictions — all in one place.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    if hist:
+        btn_col, _ = st.columns([1, 5])
+        with btn_col:
+            if st.button("Clear All", key="clear_all"):
                 st.session_state["history"] = []
                 st.rerun()
 
@@ -1421,91 +1646,125 @@ elif st.session_state["page"] == "history":
         """, unsafe_allow_html=True)
     else:
         for idx, entry in enumerate(reversed(hist)):
-            real_idx = len(hist) - 1 - idx  
+            real_idx = len(hist) - 1 - idx
 
-            row_l, row_r = st.columns([11, 1])
-            with row_l:
-                st.markdown(f"""
-                <div class="h-card">
-                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.45rem;">
-                        <div>
-                            <span class="h-brand">{entry['brand']}</span>
-                            <span class="h-type">· {entry['laptop_type']}</span>
-                        </div>
-                        <div class="h-price">₹{entry['price']}</div>
+            st.markdown(f"""
+            <div class="h-card">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.45rem;">
+                    <div>
+                        <span class="h-brand">{entry['brand']}</span>
+                        <span class="h-type">· {entry['laptop_type']}</span>
                     </div>
-                    <div class="h-specs">
-                        <span>{entry['cpu_model']}</span> &nbsp;|&nbsp;
-                        <span>{entry['ram']}</span> &nbsp;|&nbsp;
-                        <span>{entry['storage']}</span> &nbsp;|&nbsp;
-                        <span>{entry['gpu_model']}</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <div class="h-os">{entry['os']}</div>
-                        <div class="h-time">{entry['timestamp']}</div>
-                    </div>
+                    <div class="h-price">₹{entry['price']}</div>
                 </div>
-                """, unsafe_allow_html=True)
-            with row_r:
-                if st.button("🗑", key=f"del_{real_idx}"):
-                    st.session_state["history"].pop(real_idx)
-                    st.rerun()
+                <div class="h-specs">
+                    <span>{entry['cpu_model']}</span> &nbsp;|&nbsp;
+                    <span>{entry['ram']}</span> &nbsp;|&nbsp;
+                    <span>{entry['storage']}</span> &nbsp;|&nbsp;
+                    <span>{entry['gpu_model']}</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div class="h-os">{entry['os']}</div>
+                    <div class="h-time">{entry['timestamp']}</div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            st.markdown('<div class="h-separator">&nbsp;</div>', unsafe_allow_html=True)
 
 
-# =============================================================================
-#  PAGE: MODEL INFO
-# =============================================================================
 elif st.session_state["page"] == "model_info":
 
-    st.markdown('<h1 class="laptiq-title">About LaptiQ</h1>', unsafe_allow_html=True)
     st.markdown("""
-    <div class="mi-desc">
-        LaptiQ estimates the current market value of any laptop based on its specs.
-        Enter the processor, GPU, RAM, display, and build details — and LaptiQ returns
-        a price prediction in Indian Rupees, powered by a tuned XGBoost pipeline.
+    <div class="hero-section">
+        <div class="hero-heading">
+            <div class="hero-line-1">About the</div>
+            <div class="hero-line-2">Model Behind It</div>
+        </div>
+        <div class="hero-subtitle">
+            LaptiQ estimates market value from specs — powered by a tuned XGBoost pipeline
+            trained on 935 laptops from the Indian market.
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # --- Model Stats ------------------------------
+    st.markdown("""
+    <div class="section-title-wrap">
+        <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        </div>
+        <div class="section-title">Model Performance</div>
+        <div class="section-divider"></div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.markdown('<div class="mi-section">📊 Model Performance</div>', unsafe_allow_html=True)
     s1, s2, s3 = st.columns(3)
     with s1:
         st.markdown("""
-        <div class="sb-stat">
-            <div class="sb-stat-label">R² Accuracy</div>
-            <div class="sb-stat-val green">93.46%</div>
+        <div class="sb-stat-new">
+            <div class="sb-stat-top">
+                <div class="sb-stat-title">R² Accuracy</div>
+                <div class="sb-stat-icon blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                </div>
+            </div>
+            <div class="sb-stat-val-new blue">93.46%</div>
+            <div class="sb-stat-sub">Higher is better</div>
         </div>
         """, unsafe_allow_html=True)
     with s2:
         st.markdown("""
-        <div class="sb-stat">
-            <div class="sb-stat-label">Avg Prediction Error</div>
-            <div class="sb-stat-val orange">11.68%</div>
+        <div class="sb-stat-new">
+            <div class="sb-stat-top">
+                <div class="sb-stat-title">Avg Prediction Error</div>
+                <div class="sb-stat-icon orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+            </div>
+            <div class="sb-stat-val-new orange">11.68%</div>
+            <div class="sb-stat-sub">Lower is better</div>
         </div>
         """, unsafe_allow_html=True)
     with s3:
         st.markdown("""
-        <div class="sb-stat">
-            <div class="sb-stat-label">Laptops Trained On</div>
-            <div class="sb-stat-val purple">935</div>
+        <div class="sb-stat-new">
+            <div class="sb-stat-top">
+                <div class="sb-stat-title">Laptops Trained On</div>
+                <div class="sb-stat-icon purple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+            </div>
+            <div class="sb-stat-val-new purple">935</div>
+            <div class="sb-stat-sub">Indian market data</div>
         </div>
         """, unsafe_allow_html=True)
 
-    # --- How It Works ------------------------------
+        st.markdown("""
+    <div class="section-title-wrap">
+        <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </div>
+        <div class="section-title">How It Works</div>
+        <div class="section-divider"></div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.markdown('<div class="mi-section">⚙️ How It Works</div>', unsafe_allow_html=True)
     steps = [
-        "Enter your laptop specs",
-        "LaptiQ engineers your input",
-        "A tuned XGBoost pipeline predicts the log-transformed price",
-        "The result is converted back and displayed in Indian rupee format",
+        ("Enter your laptop specs", "Provide configuration details like CPU, RAM, GPU, storage, and more."),
+        ("LaptiQ engineers your input", "We clean, process, and transform your specs for optimal prediction."),
+        ("Get accurate market value", "Our tuned XGBoost model predicts the fair market price instantly."),
     ]
-    for i, text in enumerate(steps, 1):
+    for i, (title, desc) in enumerate(steps, 1):
         st.markdown(f"""
-        <div class="mi-step">
-            <div class="mi-num">{i}</div>
-            <div class="mi-text">{text}</div>
+        <div class="mi-step-card">
+            <div class="mi-step-num">{i}</div>
+            <div class="mi-step-content">
+                <div class="mi-step-title">{title}</div>
+                <div class="mi-step-desc">{desc}</div>
+            </div>
+            <div class="mi-step-chevron">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c7c90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1516,16 +1775,19 @@ elif st.session_state["page"] == "model_info":
     """, unsafe_allow_html=True)
 
 
-# =============================================================================
-#  PAGE: COMPARE
-# =============================================================================
 elif st.session_state["page"] == "compare":
 
-    st.markdown('<h1 class="laptiq-title">LaptiQ</h1>', unsafe_allow_html=True)
-    st.markdown(
-        '<p class="laptiq-sub">Compare up to 3 laptops side-by-side</p>',
-        unsafe_allow_html=True,
-    )
+    st.markdown("""
+    <div class="hero-section hero-compact">
+        <div class="hero-heading">
+            <div class="hero-line-2">Compare</div>
+        </div>
+        <div class="hero-subtitle">
+            Fill in the specs for each laptop and see which one gives you the best value.
+        </div>
+        <div class="hero-accent">&nbsp;</div>
+    </div>
+    """, unsafe_allow_html=True)
 
     active_tab = st.session_state.get("compare_active_tab", 0)
 
@@ -1548,8 +1810,7 @@ elif st.session_state["page"] == "compare":
                 st.session_state["compare_active_tab"] = idx
                 st.rerun()
 
-    # --- Three form columns -----------------------------------------------
-    cols = st.columns(3)
+        cols = st.columns(3)
     forms = []
     for idx in range(3):
         with cols[idx]:
@@ -1564,9 +1825,8 @@ elif st.session_state["page"] == "compare":
             form_data = render_laptop_form(idx + 1)
             forms.append(form_data)
 
-    # --- Compare button ---------------------------------------------------
-    st.markdown("<br>", unsafe_allow_html=True)
-    compare_clicked = st.button("⚡  Compare Prices", use_container_width=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+    compare_clicked = st.button("Compare Prices  →", type="primary", use_container_width=True)
 
     if compare_clicked:
         filled = []
