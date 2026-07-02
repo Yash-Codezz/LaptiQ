@@ -839,6 +839,12 @@ div.stButton.cmp-tab-btn > button.cmp-tab-active {
 
 /* tablets */
 @media (max-width: 768px) {
+    section[data-testid="stSidebar"] {
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: 240px !important;
+    }
+
     .block-container {
         padding-left: 0.7rem !important;
         padding-right: 0.7rem !important;
